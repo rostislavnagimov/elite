@@ -1,78 +1,171 @@
-import Link from 'next/link';
+'use client'
 
-const categories = [
-    'Административный персонал',
-    'Добыча сырья',
-    'Медицина, фармацевтика',
-    'Образование',
-    'Продажи',
-    'Производство',
-    'Строительство',
-    'Технические',
-    'Топ-менеджмент',
-    'Юриспруденция',
-    'Начинающим специалистам'
-];
+import Link from 'next/link'
 
-const latestJobs = [
-    {
-        title: 'АНАЛИТИК-ТЕСТИРОВЩИК'
-    },
-    {
-        title: 'JAVA-РАЗРАБОТЧИК'
-    },
-    {
-        title: 'МЕНЕДЖЕР ПО ПРОДАЖАМ УСЛУГ'
-    }
-];
+const leftColumn = [
+  {label: 'It/интернет/телеком', href: '/vacancies-it'},
+  {label: 'Административный персонал', href: '/administrativnyy-personal'},
+  {label: 'Банки/инвестиции/лизинг', href: '/banki-investitsii-lizing'},
+  {label: 'Бухгалтерия/финансы/аудит', href: '/bukhgalteriya-finansy-audit'},
+  {label: 'Добыча сырья', href: '/dobycha-syrya'},
+  {label: 'Логистика/транспорт', href: '/logistika-transport'},
+  {label: 'Маркетинг/реклама/pr', href: '/marketing-reklama-pr'},
+  {label: 'Медицина, фармацевтика', href: '/meditsina-farmatsevtika'},
+  {label: 'Начинающим специалистам', href: '/nachinayushchim-spetsialistam'}
+]
 
+const rightColumn = [
+  {label: 'Образование', href: '/obrazovaniye'},
+  {label: 'Продажи', href: '/prodazhi'},
+  {label: 'Производство', href: '/proizvodstvo'},
+  {label: 'Строительство', href: '/stroitelstvo'},
+  {label: 'Технические', href: '/tekhnicheskiye'},
+  {label: 'Топ-менеджмент', href: '/top-management'},
+  {label: 'Управление персоналом/hr', href: '/upravleniye-personalom-hr'},
+  {label: 'Юриспруденция', href: '/yurisprudentsiya'}
+]
+
+const latestJobs = [{title: 'АНАЛИТИК-ТЕСТИРОВЩИК'}, {title: 'JAVA-РАЗРАБОТЧИК'}, {title: 'МЕНЕДЖЕР ПО ПРОДАЖАМ УСЛУГ'}]
 
 export default function Vacancies() {
-    return (
-        <section className="py-20 bg-white">
-            <div className="max-w-[1200px] mx-auto px-5 lg:px-10">
-                <div className="mb-14">
-                    <h2 className="text-[36px] lg:text-[45px] font-bold leading-[54px] uppercase mb-4">
-                        <span className="gradient-text">ВАКАНСИИ</span>
-                    </h2>
-                    <p className="text-elite-black-2 text-[18px] leading-relaxed max-w-[900px]">
-                        Сотрудничество с Elite поможет быстро сориентироваться на рынке труда, как работодателю, который
-                        находится в поиске профессиональных сотрудников, так и кандидату, который ищет работу для
-                        развития своей карьеры.
-                    </p>
-                </div>
+  return (
+    <section className="bg-white">
+      {/* ── Верхняя белая часть: заголовок + описание + категории ── */}
+      <div className="mx-auto max-w-[1200px] px-5 pt-[25px]">
+        {/* Заголовок — не трогаем */}
+        <h2 className="mb-4 text-[36px] font-bold uppercase leading-[54px] lg:text-[45px]">
+          <span className="gradient-text">ВАКАНСИИ</span>
+        </h2>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-16">
-                    {categories.map((cat, index) => (
-                        <Link
-                            key={index}
-                            href="#"
-                            className="text-elite-black hover:text-elite-pink transition-colors py-2 border-b border-gray-50 flex items-center justify-between group"
-                        >
-                            <span className="text-sm md:text-base">{cat}</span>
-                            <span className="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-                        </Link>
-                    ))}
-                </div>
+        {/* Описание */}
+        <p
+          className="mb-[89px] text-[#1e1e1e]"
+          style={{
+            fontFamily: "'Gilroy', Arial, sans-serif",
+            fontSize: '16px',
+            fontWeight: 400,
+            lineHeight: '25px',
+            maxWidth: '690px'
+          }}
+        >
+          Сотрудничество с Elite поможет быстро сориентироваться на рынке труда, как работодателю, который находится в
+          поиске профессиональных сотрудников, так и кандидату, который ищет работу для развития своей карьеры.
+        </p>
 
-                <h2 className="text-[32px] font-bold uppercase mb-10">
-                    <span className="gradient-text">ПОСЛЕДНИЕ ВАКАНСИИ</span>
-                </h2>
+        {/* Категории: 2 колонки */}
+        <div className="flex gap-0 pb-20">
+          <div className="flex-1">
+            {leftColumn.map((item) => (
+              <div key={item.href}>
+                <Link
+                  href={item.href}
+                  className="text-[#1e1e1e] transition-colors hover:text-[#e61a66]"
+                  style={{
+                    fontFamily: "'Gilroy', Arial, sans-serif",
+                    fontSize: '34px',
+                    fontWeight: 400,
+                    lineHeight: '48px',
+                    display: 'inline-block'
+                  }}
+                >
+                  {item.label}
+                </Link>
+              </div>
+            ))}
+          </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {latestJobs.map((job, index) => (
-                        <div key={index} className="border border-gray-100 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col gap-6">
-                            <h3 className="text-xl font-bold text-elite-black">{job.title}</h3>
-                            <Link
-                                href="#"
-                                className="inline-block bg-elite-pink text-white text-center py-3 rounded-lg font-semibold hover:bg-[#c91659] transition-colors"
-                            >
-                                Узнать подробнее
-                            </Link>
-                        </div>
-                    ))}
-                </div>
+          <div className="flex-1">
+            {rightColumn.map((item) => (
+              <div key={item.href}>
+                <Link
+                  href={item.href}
+                  className="text-[#1e1e1e] transition-colors hover:text-[#e61a66]"
+                  style={{
+                    fontFamily: "'Gilroy', Arial, sans-serif",
+                    fontSize: '34px',
+                    fontWeight: 400,
+                    lineHeight: '48px',
+                    display: 'inline-block'
+                  }}
+                >
+                  {item.label}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ── Полоса с фиксированным фоном: секция скроллится поверх неё ── */}
+      <div
+        className="relative w-full overflow-hidden"
+        style={{
+          height: '413px',
+          backgroundImage:
+            "url('https://optim.tildacdn.com/tild6366-3930-4735-b134-386136633364/-/format/webp/pexels-fox-1595391.jpeg.webp')",
+          backgroundAttachment: 'fixed',
+          backgroundPosition: 'center center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Бегущая строка у нижнего края фото */}
+        <div className="absolute bottom-0 left-0 right-0 overflow-hidden" style={{height: '98px'}}>
+          <div
+            style={{
+              display: 'inline-block',
+              whiteSpace: 'nowrap',
+              animation: 'marqueeVacancies 7s linear infinite',
+              fontFamily: "'Gilroy', Arial, sans-serif",
+              fontSize: '63px',
+              fontWeight: 400,
+              lineHeight: '98px',
+              color: 'rgba(255,255,255,0.18)'
+            }}
+          >
+            {Array.from({length: 14}).map((_, i) => (
+              <span key={i}>
+                <strong>ВАКАНСИИ </strong>ВАКАНСИИ{' '}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <style jsx>{`
+        @keyframes marqueeVacancies {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
+
+      {/* ── Последние вакансии ── */}
+      <div className="mx-auto max-w-[1200px] px-5 pb-20 pt-16">
+        <h2 className="mb-10 text-[32px] font-bold uppercase">
+          <span className="gradient-text">ПОСЛЕДНИЕ ВАКАНСИИ</span>
+        </h2>
+
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          {latestJobs.map((job, index) => (
+            <div
+              key={index}
+              className="flex flex-col gap-6 rounded-xl border border-gray-100 p-8 shadow-sm transition-shadow hover:shadow-md"
+            >
+              <h3 className="text-xl font-bold text-elite-black">{job.title}</h3>
+              <Link
+                href="#"
+                className="inline-block rounded-lg bg-[#e61a66] py-3 text-center font-semibold text-white transition-colors hover:bg-[#c91659]"
+              >
+                Узнать подробнее
+              </Link>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+      </div>
+    </section>
+  )
 }

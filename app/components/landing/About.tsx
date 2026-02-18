@@ -1,72 +1,146 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function About() {
-    return (
-        <section className="py-20 bg-white">
-            <div className="max-w-[1200px] mx-auto px-5 lg:px-10">
-                <div className="flex flex-col lg:flex-row gap-12 items-start">
-                    <div className="lg:w-1/3">
-                        <h2 className="text-elite-pink text-[18px] font-semibold uppercase tracking-wider mb-4">
-                            О КОМПАНИИ
-                        </h2>
-                        <h3 className="text-elite-black text-[36px] lg:text-[45px] font-bold leading-tight uppercase">
-                            <span className="gradient-text">КАДРОВЫЙ ХОЛДИНГ ELITE</span>
-                        </h3>
-                        <Link
-                            href="/aboutus"
-                            className="inline-block mt-8 bg-elite-pink text-white px-8 py-3 rounded-full text-sm font-semibold uppercase tracking-wider hover:bg-[#c91659] transition-colors"
-                        >
-                            Подробнее
-                        </Link>
-                    </div>
+  return (
+    <section className="mt-[72px] overflow-hidden bg-white pb-[30px] pt-0">
+      <h2 className="gradient-text ml-[10%]">О КОМПАНИИ</h2>
+      <div className="relative mx-auto max-w-[1200px] px-5">
+        <div className="relative z-10 pt-[47px]">
+          <h2 className="gradient-text text-[45px] uppercase">КАДРОВЫЙ ХОЛДИНГ ELITE</h2>
 
-                    <div className="lg:w-2/3 flex flex-col gap-6 text-elite-black-2 text-[18px] leading-relaxed relative">
-                        <div className="relative mb-8 group cursor-pointer">
-                            <div className="bg-gray-100 rounded-lg overflow-hidden aspect-[16/9] relative">
-                                <Image
-                                    src="/assets/__.jpeg"
-                                    alt="About Elite"
-                                    fill
-                                    className="object-cover opacity-80"
-                                />
-                                {/* Play Button Overlay */}
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className="relative w-32 h-32 flex items-center justify-center">
-                                        {/* Circular Text (SVG placeholder) */}
-                                        <div className="absolute inset-0 animate-spin-slow">
-                                            <svg className="w-full h-full" viewBox="0 0 100 100">
-                                                <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent" />
-                                                <text className="text-[8px] uppercase tracking-widest font-bold fill-white">
-                                                    <textPath xlinkHref="#circlePath">
-                                                        КОРОТКОЕ ВИДЕО О КОМПАНИИ • ПОСМОТРИТЕ НАМ •
-                                                    </textPath>
-                                                </text>
-                                            </svg>
-                                        </div>
-                                        {/* Play Triangle */}
-                                        <div className="w-16 h-16 bg-elite-pink rounded-full flex items-center justify-center pl-1 shadow-lg group-hover:scale-110 transition-transform">
-                                            <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[15px] border-l-white border-b-[10px] border-b-transparent"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+          <div className="max-w-[50%] text-[40px] uppercase tracking-tighter text-[#1e1e1e]">
+            ОДНА ИЗ ПЕРВЫХ КАДРОВЫХ КОМПАНИЙ НА РЫНКЕ РЕСПУБЛИКИ КАЗАХСТАН
+          </div>
 
-                        <p>
-                            На сегодняшний день Elite предлагает широкий спектр услуг в области кадрового консалтинга.
-                            Мы имеем широкую Партнерскую сеть во многих регионах Казахстана и за рубежом.
-                        </p>
-                        <p>
-                            Нашими консультантами реализуются проекты для крупнейших казахстанских и международных
-                            компаний в различных отраслях экономики.
-                        </p>
-                        <p className="font-bold text-elite-black text-[22px] leading-snug">
-                            ОДНА ИЗ ПЕРВЫХ КАДРОВЫХ КОМПАНИЙ НА РЫНКЕ РЕСПУБЛИКИ КАЗАХСТАН
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+          <div
+            className="text-[#1e1e1e]"
+            style={{
+              fontFamily: "'Gilroy', Arial, sans-serif",
+              fontSize: '15px',
+              fontWeight: 400,
+              lineHeight: 1.55,
+              maxWidth: '418px'
+            }}
+          >
+            На сегодняшний день Elite предлагает широкий спектр услуг в области кадрового консалтинга. Мы имеем широкую
+            Партнерскую сеть во многих регионах Казахстана и за рубежом.
+            <br />
+            <br />
+            Нашими консультантами реализуются проекты для крупнейших казахстанских и международных компаний в различных
+            отраслях экономики.
+            <br />
+            <br />В перечень услуг компании Elite входит: подбор персонала, аутстаффинг и аутсорсинг персонала,
+            аутстаффинг компании, обзоры рынка труда и заработных плат, управление персоналом, проверка тайным
+            покупателем, также множество других направлений в области кадрового консалтинга.
+          </div>
+
+          {/* "ПОДРОБНЕЕ" button — circle border + arrow */}
+          <div className="mt-[40px] flex items-center gap-[30px]">
+            {/* Circle border button */}
+            <Link
+              href="/aboutus"
+              className="flex h-[60px] w-[60px] flex-shrink-0 items-center justify-center rounded-full border border-[#e61a66] transition-transform hover:scale-110"
+              aria-label="Подробнее"
+            >
+              {/* Arrow icon from original */}
+              <Image
+                src="https://optim.tildacdn.com/tild6265-3161-4666-a162-326263356339/-/format/webp/1.png.webp"
+                alt=""
+                width={17}
+                height={15}
+                unoptimized
+              />
+            </Link>
+
+            {/* "ПОДРОБНЕЕ" text */}
+            <Link
+              href="/aboutus"
+              className="text-[#26262b] transition-colors hover:text-[#e61a66]"
+              style={{
+                fontFamily: "'Gilroy', Arial, sans-serif",
+                fontSize: '18px',
+                fontWeight: 500,
+                lineHeight: 1.55
+              }}
+            >
+              ПОДРОБНЕЕ
+            </Link>
+          </div>
+        </div>
+
+        {/* Right image — large, pill shape, absolutely positioned */}
+        <div
+          className="absolute right-[-30%] top-[110px] z-0 hidden lg:block"
+          style={{
+            width: '1070px',
+            height: '550px',
+            borderRadius: '500px',
+            overflow: 'hidden'
+          }}
+        >
+          <Image
+            src="https://optim.tildacdn.com/tild6163-6431-4137-a466-323639336162/-/format/webp/pexels-christina-mor.jpeg.webp"
+            alt=""
+            fill
+            className="object-cover object-top"
+            unoptimized
+          />
+
+          {/* Video button — rotating circle + play, positioned inside the image area */}
+          <div className="absolute" style={{top: '245px', left: '160px'}}>
+            <Link
+              href="#popup:youtubevideo"
+              role="button"
+              aria-haspopup="dialog"
+              className="group relative block h-[170px] w-[170px]"
+            >
+              {/* Rotating circle text */}
+              <div className="absolute inset-0 animate-spin" style={{animationDuration: '15s'}}>
+                <Image
+                  src="https://optim.tildacdn.com/tild3830-3765-4731-b133-356134643237/-/resize/340x/-/format/webp/about2.png.webp"
+                  alt=""
+                  fill
+                  className="object-contain"
+                  unoptimized
+                />
+              </div>
+              {/* Play icon centered */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Image
+                  src="https://static.tildacdn.com/tild6534-6336-4332-a431-613630383062/play.svg"
+                  alt=""
+                  width={60}
+                  height={60}
+                  className="transition-transform group-hover:scale-105"
+                  unoptimized
+                />
+              </div>
+            </Link>
+          </div>
+        </div>
+
+        {/* Mobile image */}
+        <div
+          className="mx-auto mt-8 lg:hidden"
+          style={{
+            width: '100%',
+            maxWidth: '452px',
+            height: '239px',
+            borderRadius: '100px',
+            overflow: 'hidden',
+            position: 'relative'
+          }}
+        >
+          <Image
+            src="https://optim.tildacdn.com/tild6163-6431-4137-a466-323639336162/-/format/webp/pexels-christina-mor.jpeg.webp"
+            alt=""
+            fill
+            className="object-cover object-top"
+            unoptimized
+          />
+        </div>
+      </div>
+    </section>
+  )
 }
