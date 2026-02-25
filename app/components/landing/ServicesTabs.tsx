@@ -17,7 +17,7 @@ const tabs = [
       'Официальное оформление персонала',
       'Возможность вести бизнес в Казахстане без открытия офиса или представительства'
     ],
-    image: 'https://static.tildacdn.com/tild3161-3037-4330-b462-386461326466/pexels-christina-mor.jpg'
+    image: '/assets/images/1.jpeg'
   },
   {
     id: 'outsourcing',
@@ -26,7 +26,7 @@ const tabs = [
     description:
       'Позволяет не только перераспределить вспомогательные бизнес-процессы, но и снизить юридические и финансовые риски найма персонала на короткий срок. Трудовые отношения с работниками будут оформлены нашей компанией, правоотношения «клиент-работник» отсутствуют.',
     list: ['Повышение своей конкурентоспособности.'],
-    image: 'https://static.tildacdn.com/tild3831-3331-4138-b433-316238313437/pexels-christina-mor.jpg'
+    image: '/assets/images/2.jpeg'
   },
   {
     id: 'recruitment',
@@ -35,7 +35,7 @@ const tabs = [
     description:
       'Кадровое агентство Elite - профессиональный подбор высшего руководства, редких специалистов и менеджеров среднего звена.',
     list: ['Оперативное и качественное закрытие вакансии.'],
-    image: 'https://static.tildacdn.com/tild6130-3338-4231-a232-353239633633/pexels-christina-mor.jpg'
+    image: '/assets/images/3.jpeg'
   },
   {
     id: 'market-reviews',
@@ -44,7 +44,7 @@ const tabs = [
     description:
       'Это актуальная информация о реальных заработных платах, наличии и уровнях квалификации специалистов, это целевые аналитические исследования по запросу компании.',
     list: ['Понимание конкурентоспособности уровня оплаты для новой позиции.'],
-    image: 'https://static.tildacdn.com/tild6135-6435-4331-b830-613032333762/pexels-christina-mor.jpg'
+    image: '/assets/images/4.jpeg'
   }
 ]
 
@@ -52,11 +52,11 @@ export default function ServicesTabs() {
   const [activeTab, setActiveTab] = useState(tabs[0])
 
   return (
-    <section className="bg-white py-20">
-      <div className="mx-auto max-w-[1200px] px-5 lg:px-10">
-        <div className="mb-12">
-          <h2 className="mb-4 text-[18px] font-semibold uppercase tracking-wider text-elite-pink">НАШИ УСЛУГИ</h2>
-          <h3 className="text-[36px] font-bold uppercase leading-tight text-elite-black lg:text-[45px]">
+    <section className="w-full bg-white py-20">
+      <div className="">
+        <div className="mb-12 mx-auto max-w-[1200px]">
+          <h2 className="mb-4 text-[18px] font-[300] uppercase tracking-wider text-[#e61a66]">НАШИ УСЛУГИ</h2>
+          <h3 className="text-[36px] font-[300] uppercase leading-tight text-elite-black lg:text-[45px]">
             РЕШЕНИЯ В ОБЛАСТИ АУТСОРСИНГА И УПРАВЛЕНИЯ ПЕРСОНАЛОМ
           </h3>
         </div>
@@ -66,7 +66,7 @@ export default function ServicesTabs() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab)}
-              className={`rounded-full px-8 py-3 font-bold transition-all duration-300 ${
+              className={`rounded-full px-8 py-3 font-[300] transition-all duration-300 ${
                 activeTab.id === tab.id
                   ? 'scale-105 bg-[#e61a66] text-white shadow-lg'
                   : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
@@ -77,9 +77,9 @@ export default function ServicesTabs() {
           ))}
         </div>
 
-        <div className="animate-in fade-in slide-in-from-bottom-4 flex flex-col items-center gap-12 duration-500 lg:flex-row">
-          <div className="w-full lg:w-1/2">
-            <h3 className="mb-6 text-2xl font-bold uppercase leading-tight text-elite-black lg:text-3xl">
+        <div className="h-[80vh] animate-in fade-in slide-in-from-bottom-4 flex flex-col items-center gap-12 duration-500 lg:flex-row">
+          <div className="w-full lg:w-1/3 ml-[160px]">
+            <h3 className="mb-6 text-2xl font-[300] uppercase leading-tight text-elite-black lg:text-3xl">
               {activeTab.heading}
             </h3>
             <p className="mb-8 text-lg leading-relaxed text-gray-600">{activeTab.description}</p>
@@ -91,20 +91,19 @@ export default function ServicesTabs() {
                 </li>
               ))}
             </ul>
-            <button className="mt-10 rounded-full bg-[#e61a66] px-10 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-md transition-colors hover:bg-[#c91659]">
+            <button className="mt-10 rounded-full bg-[#e61a66] px-10 py-4 text-sm font-[300] uppercase tracking-wider text-white shadow-md transition-colors hover:bg-[#c91659]">
               Подробнее
             </button>
           </div>
-
-          <div className="relative h-[400px] w-full overflow-hidden rounded-3xl shadow-2xl lg:w-1/2">
+          <div className='relative h-full w-full lg:w-2/3 overflow-visible'>
             <Image
               src={activeTab.image}
               alt={activeTab.title}
-              fill
-              className="object-cover transition-transform duration-700 hover:scale-110"
+              width={1000}
+              height={1000}
+              className="absolute left-0 top-0 h-full rounded-l-full"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-          </div>
+            </div>
         </div>
       </div>
     </section>

@@ -84,35 +84,35 @@ export default function Footer() {
 
         {/* Column 2: Navigation */}
         <div>
-          <h3 className="mb-6 text-lg font-bold uppercase tracking-wider">Навигация</h3>
+          <h3 className="mb-6 text-lg font-[300] uppercase tracking-wider">Навигация</h3>
           <ul className="flex flex-col gap-4 text-white/70">
             <li>
-              <Link href="/" className="transition-colors hover:text-elite-pink">
+              <Link href="/" className="transition-colors hover:text-[#e61a66]">
                 Главная
               </Link>
             </li>
             <li>
-              <Link href="/aboutus" className="transition-colors hover:text-elite-pink">
+              <Link href="/aboutus" className="transition-colors hover:text-[#e61a66]">
                 О компании
               </Link>
             </li>
             <li>
-              <Link href="/reviews" className="transition-colors hover:text-elite-pink">
+              <Link href="/reviews" className="transition-colors hover:text-[#e61a66]">
                 Отзывы
               </Link>
             </li>
             <li>
-              <Link href="/vacancy" className="transition-colors hover:text-elite-pink">
+              <Link href="/vacancy" className="transition-colors hover:text-[#e61a66]">
                 Вакансии
               </Link>
             </li>
             <li>
-              <Link href="/blog" className="transition-colors hover:text-elite-pink">
+              <Link href="/blog" className="transition-colors hover:text-[#e61a66]">
                 Блог
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="transition-colors hover:text-elite-pink">
+              <Link href="/contact" className="transition-colors hover:text-[#e61a66]">
                 Контакты
               </Link>
             </li>
@@ -121,7 +121,7 @@ export default function Footer() {
 
         {/* Column 3: Contacts */}
         <div>
-          <h3 className="mb-6 text-lg font-bold uppercase tracking-wider">Контакты</h3>
+          <h3 className="mb-6 text-lg font-[300] uppercase tracking-wider">Контакты</h3>
           <div className="flex flex-col gap-6 text-white/70">
             <div>
               <p className="mb-1 text-xs uppercase text-white/40">Адрес</p>
@@ -131,14 +131,14 @@ export default function Footer() {
               <p className="mb-1 text-xs uppercase text-white/40">Телефон</p>
               <a
                 href="tel:+77013555355"
-                className="text-lg font-semibold text-white transition-colors hover:text-elite-pink"
+                className="text-lg font-[300] text-white transition-colors hover:text-[#e61a66]"
               >
                 +7 (701) 355-53-55
               </a>
             </div>
             <div>
               <p className="mb-1 text-xs uppercase text-white/40">Контроль качества</p>
-              <a href="tel:+77010317586" className="transition-colors hover:text-elite-pink">
+              <a href="tel:+77010317586" className="transition-colors hover:text-[#e61a66]">
                 +7 (701) 031-75-86
               </a>
             </div>
@@ -147,7 +147,7 @@ export default function Footer() {
 
         {/* Column 4: Feedback/Questions */}
         <div>
-          <h3 className="mb-6 text-lg font-bold uppercase tracking-wider">Остались вопросы?</h3>
+          <h3 className="mb-6 text-lg font-[300] uppercase tracking-wider">Остались вопросы?</h3>
           <p className="mb-6 text-white/70">Направьте свой запрос, наш специалист перезвонит в ближайшее время!</p>
           <form className="flex flex-col gap-4">
             <input
@@ -160,7 +160,7 @@ export default function Footer() {
               placeholder="+7 (___) ___-__-__"
               className="rounded-md border border-white/20 bg-white/10 px-4 py-3 text-white transition-colors placeholder:text-white/40 focus:border-elite-pink focus:outline-none"
             />
-            <button className="mt-2 w-full rounded-md bg-[#e61a66] py-3 font-bold text-white transition-colors hover:bg-[#e61a66]/90">
+            <button className="mt-2 w-full rounded-md bg-[#e61a66] py-3 font-[300] text-white transition-colors hover:bg-[#e61a66]/90">
               Отправить заявку
             </button>
           </form>

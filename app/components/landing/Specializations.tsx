@@ -13,7 +13,7 @@ export default function Specializations() {
   return (
     <section className="bg-white py-20">
       <div className="mx-auto max-w-[1200px] px-5 lg:px-10">
-        <h2 className="mb-12 text-[45px] font-bold uppercase leading-[54px]">
+        <h2 className="mb-12 text-[45px] font-[300] uppercase leading-[54px]">
           <span className="gradient-text">Направления подбора</span>
         </h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -23,10 +23,10 @@ export default function Specializations() {
               href={spec.href}
               className="group flex items-center justify-between rounded-lg border border-gray-100 p-8 transition-all duration-300 hover:border-elite-pink"
             >
-              <span className="text-[24px] font-semibold text-elite-black transition-colors group-hover:text-elite-pink">
+              <span className="text-[24px] font-[300] text-elite-black transition-colors group-hover:text-[#e61a66]">
                 {spec.title}
               </span>
-              <span className="text-elite-pink opacity-0 transition-opacity group-hover:opacity-100">
+              <span className="text-[#e61a66] opacity-0 transition-opacity group-hover:opacity-100">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M5 12H19M19 12L12 5M19 12L12 19"

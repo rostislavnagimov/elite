@@ -16,7 +16,7 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-[1200px] px-5 lg:px-10">
         <div className="max-w-[900px]">
-          <h1 className="mb-8 text-[40px] font-bold uppercase leading-tight text-white lg:text-[65px]">
+          <h1 className="mb-8 text-[40px] font-[300] uppercase leading-tight text-white lg:text-[65px]">
             ПРОФЕССИОНАЛЬНОЕ <br />
             <span className="gradient-text">УПРАВЛЕНИЕ ПЕРСОНАЛОМ</span>
           </h1>
@@ -30,7 +30,7 @@ export default function Hero() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="inline-block transform rounded-full bg-[#e61a66] px-12 py-5 text-sm font-bold uppercase tracking-wider text-white transition-all hover:scale-105 hover:bg-white hover:text-elite-pink"
+              className="inline-block transform rounded-full bg-[#e61a66] px-12 py-5 text-sm font-[300] uppercase tracking-wider text-white transition-all hover:scale-105 hover:bg-white hover:text-[#e61a66]"
             >
               Бесплатная консультация
             </Link>

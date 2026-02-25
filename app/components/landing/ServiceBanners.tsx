@@ -32,8 +32,8 @@ export default function ServiceBanners() {
   return (
     <section className="overflow-hidden py-20">
       <div className="mx-auto max-w-[1200px] px-5 lg:px-10">
-        <h2 className="mb-2 text-[18px] font-semibold uppercase tracking-wider text-elite-pink">Наши услуги</h2>
-        <h3 className="mb-12 text-[36px] font-bold uppercase leading-tight text-elite-black lg:text-[45px]">
+        <h2 className="mb-2 text-[18px] font-[300] uppercase tracking-wider text-[#e61a66]">Наши услуги</h2>
+        <h3 className="mb-12 text-[36px] font-[300] uppercase leading-tight text-elite-black lg:text-[45px]">
           РЕШЕНИЯ В ОБЛАСТИ АУТСОРСИНГА И УПРАВЛЕНИЯ ПЕРСОНАЛОМ
         </h3>
 
@@ -49,12 +49,12 @@ export default function ServiceBanners() {
                 </div>
               </div>
               <div className="flex w-full flex-col gap-6 lg:w-1/2">
-                <h4 className="text-[32px] font-bold leading-tight text-elite-black">{service.title}</h4>
+                <h4 className="text-[32px] font-[300] leading-tight text-elite-black">{service.title}</h4>
                 <p className="text-[18px] leading-relaxed text-elite-black-2">{service.description}</p>
                 <div>
                   <Link
                     href={service.link}
-                    className="inline-block rounded-full bg-[#e61a66] px-8 py-3 font-semibold text-white transition-all hover:bg-[#c91659] hover:shadow-lg active:scale-95"
+                    className="inline-block rounded-full bg-[#e61a66] px-8 py-3 font-[300] text-white transition-all hover:bg-[#c91659] hover:shadow-lg active:scale-95"
                   >
                     Подробнее
                   </Link>

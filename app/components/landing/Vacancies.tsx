@@ -33,7 +33,7 @@ export default function Vacancies() {
       {/* ── Верхняя белая часть: заголовок + описание + категории ── */}
       <div className="mx-auto max-w-[1200px] px-5 pt-[25px]">
         {/* Заголовок — не трогаем */}
-        <h2 className="mb-4 text-[36px] font-bold uppercase leading-[54px] lg:text-[45px]">
+        <h2 className="mb-4 text-[36px] font-[300] uppercase leading-[54px] lg:text-[45px]">
           <span className="gradient-text">ВАКАНСИИ</span>
         </h2>
 
@@ -145,7 +145,7 @@ export default function Vacancies() {
 
       {/* ── Последние вакансии ── */}
       <div className="mx-auto max-w-[1200px] px-5 pb-20 pt-16">
-        <h2 className="mb-10 text-[32px] font-bold uppercase">
+        <h2 className="mb-10 text-[32px] font-[300] uppercase">
           <span className="gradient-text">ПОСЛЕДНИЕ ВАКАНСИИ</span>
         </h2>
 
@@ -155,10 +155,10 @@ export default function Vacancies() {
               key={index}
               className="flex flex-col gap-6 rounded-xl border border-gray-100 p-8 shadow-sm transition-shadow hover:shadow-md"
             >
-              <h3 className="text-xl font-bold text-elite-black">{job.title}</h3>
+              <h3 className="text-xl font-[300] text-elite-black">{job.title}</h3>
               <Link
                 href="#"
-                className="inline-block rounded-lg bg-[#e61a66] py-3 text-center font-semibold text-white transition-colors hover:bg-[#c91659]"
+                className="inline-block rounded-lg bg-[#e61a66] py-3 text-center font-[300] text-white transition-colors hover:bg-[#c91659]"
               >
                 Узнать подробнее
               </Link>

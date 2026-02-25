@@ -12,7 +12,7 @@ import Footer from './components/landing/Footer'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen flex flex-col gap-4">
       <Header />
       <Hero />
       <About />
@@ -20,8 +20,8 @@ export default function Home() {
       <Advantages />
       <Vacancies />
       <Reviews />
-      <Clients />
       <News />
+      <Clients />
       <Subscription />
       <Footer />
     </main>

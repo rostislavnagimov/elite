@@ -30,8 +30,8 @@ export default function News() {
     <section className="bg-white py-20">
       <div className="mx-auto max-w-[1200px] px-5 lg:px-10">
         <div className="mb-12">
-          <h2 className="mb-4 text-[18px] font-semibold uppercase tracking-wider text-elite-pink">НОВОСТИ</h2>
-          <h3 className="text-[36px] font-bold uppercase leading-tight text-elite-black lg:text-[45px]">
+          <h2 className="mb-4 text-[18px] font-[300] uppercase tracking-wider text-[#e61a66]">НОВОСТИ</h2>
+          <h3 className="text-[36px] font-[300] uppercase leading-tight text-elite-black lg:text-[45px]">
             ПОСЛЕДНИЕ ПУБЛИКАЦИИ
           </h3>
         </div>
@@ -47,7 +47,7 @@ export default function News() {
                 <Image src={post.image} alt={post.title} fill className="object-cover" />
               </div>
               <div className="flex flex-col gap-4 p-8">
-                <h4 className="text-[18px] font-bold leading-snug text-elite-black">{post.title}</h4>
+                <h4 className="text-[18px] font-[300] leading-snug text-elite-black">{post.title}</h4>
                 <p className="text-[14px] leading-relaxed text-elite-black-2">{post.description}</p>
               </div>
             </Link>
