@@ -59,7 +59,8 @@ export default function Subscription() {
               </div>
 
               {/* Кнопка */}
-              <button
+              <div className="flex">
+                             <button
                 type="submit"
                 style={{
                   display: 'block',
@@ -103,6 +104,9 @@ export default function Subscription() {
                   Нажимая кнопку "Подписаться", вы соглашаетесь с политикой конфиденциальности
                 </p>
               </div>
+
+              </div>
+ 
             </form>
           </div>
         </div>

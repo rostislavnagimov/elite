@@ -115,12 +115,12 @@ export default function Vacancies() {
             style={{
               display: 'inline-block',
               whiteSpace: 'nowrap',
-              animation: 'marqueeVacancies 7s linear infinite',
+              animation: 'marqueeVacancies 70s linear infinite',
               fontFamily: "'Gilroy', Arial, sans-serif",
               fontSize: '63px',
               fontWeight: 400,
               lineHeight: '98px',
-              color: 'rgba(255,255,255,0.18)'
+              color: '#fff9'
             }}
           >
             {Array.from({length: 14}).map((_, i) => (
