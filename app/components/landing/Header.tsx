@@ -2,8 +2,10 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export default function Header() {
+  const pathname = usePathname()
   return (
     <header className="fixed top-0 z-50 w-full bg-white shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
       <div className="mx-auto flex h-[80px] max-w-[1200px] items-center justify-between gap-4 px-5">
@@ -23,10 +25,10 @@ export default function Header() {
         {/* Nav — center */}
         <nav className="hidden items-center lg:flex">
           <ul className="m-0 flex list-none items-center p-0">
-            <li className="pr-[15px]">
+            <li className="group relative pr-[15px]">
               <Link
                 href="#submenu:partner"
-                className="flex items-center gap-1 whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium text-[#26262b] transition-colors hover:text-[#e61a66]"
+                className="flex items-center gap-1 whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium text-[#26262b] transition-colors group-hover:text-[#e61a66]"
               >
                 Партнерам
                 <svg
@@ -46,11 +48,44 @@ export default function Header() {
                   />
                 </svg>
               </Link>
+              {/* Dropdown Menu */}
+              <div className="absolute left-0 top-full mt-2 hidden w-[250px] flex-col rounded-md bg-white p-2 shadow-[0_4px_12px_rgba(0,0,0,0.1)] group-hover:flex">
+                <Link
+                  href="/aboutus"
+                  className={`rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] transition-colors hover:bg-gray-50 hover:text-[#e61a66] ${pathname === '/aboutus' ? 'text-[#e61a66] bg-gray-50' : 'text-[#26262b]'}`}
+                >
+                  О компании
+                </Link>
+                <Link
+                  href="/outstaffing"
+                  className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
+                >
+                  Аутстаффинг
+                </Link>
+                <Link
+                  href="/outsourcing"
+                  className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
+                >
+                  Аутсорсинг персонала
+                </Link>
+                <Link
+                  href="/podbor-personala"
+                  className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
+                >
+                  Подбор персонала
+                </Link>
+                <Link
+                  href="/obzor-rynka-truda-i-zarabotanyh-plat"
+                  className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
+                >
+                  Обзоры рынка
+                </Link>
+              </div>
             </li>
-            <li className="px-[15px]">
+            <li className="group relative px-[15px]">
               <Link
                 href="#submenu:details"
-                className="flex items-center gap-1 whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium text-[#26262b] transition-colors hover:text-[#e61a66]"
+                className="flex items-center gap-1 whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium text-[#26262b] transition-colors group-hover:text-[#e61a66]"
               >
                 Соискателям
                 <svg
@@ -70,11 +105,45 @@ export default function Header() {
                   />
                 </svg>
               </Link>
+              {/* Dropdown Menu */}
+              <div className="absolute left-0 top-full mt-2 hidden w-[250px] flex-col rounded-md bg-white p-2 shadow-[0_4px_12px_rgba(0,0,0,0.1)] group-hover:flex">
+                <Link
+                  href="/aboutus"
+                  className={`rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] transition-colors hover:bg-gray-50 hover:text-[#e61a66] ${pathname === '/aboutus' ? 'text-[#e61a66] bg-gray-50' : 'text-[#26262b]'}`}
+                >
+                  О компании
+                </Link>
+                <Link
+                  href="/vacancy"
+                  className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
+                >
+                  Все вакансии
+                </Link>
+                <Link
+                  href="/sendresume"
+                  className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
+                >
+                  Отправить резюме
+                </Link>
+                <Link
+                  href="/careercounseling"
+                  className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
+                >
+                  Карьерное консультирование
+                </Link>
+                <Link
+                  href="/career"
+                  className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
+                >
+                  Карьера в Elite
+                </Link>
+              </div>
             </li>
             <li className="px-[15px]">
               <Link
                 href="/blog"
-                className="whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium text-[#26262b] transition-colors hover:text-[#e61a66]"
+                className={`whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium transition-colors hover:text-[#e61a66] ${pathname === '/blog' ? 'text-[#e61a66] border-b-2 border-[#e61a66] pb-1' : 'text-[#26262b]'
+                  }`}
               >
                 Блог
               </Link>
@@ -82,7 +151,8 @@ export default function Header() {
             <li className="pl-[15px]">
               <Link
                 href="/contact"
-                className="whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium text-[#26262b] transition-colors hover:text-[#e61a66]"
+                className={`whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium transition-colors hover:text-[#e61a66] ${pathname === '/contact' ? 'text-[#e61a66] border-b-2 border-[#e61a66] pb-1' : 'text-[#26262b]'
+                  }`}
               >
                 Контакты
               </Link>
