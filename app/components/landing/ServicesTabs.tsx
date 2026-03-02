@@ -54,7 +54,7 @@ export default function ServicesTabs() {
   return (
     <section className="w-full bg-white py-20">
       <div className="">
-        <div className="mb-12 mx-auto max-w-[1200px]">
+        <div className="mx-auto mb-12 max-w-[1200px]">
           <h2 className="mb-4 text-[18px] font-[300] uppercase tracking-wider text-[#e61a66]">НАШИ УСЛУГИ</h2>
           <h3 className="text-[36px] font-[300] uppercase leading-tight text-elite-black lg:text-[45px]">
             РЕШЕНИЯ В ОБЛАСТИ АУТСОРСИНГА И УПРАВЛЕНИЯ ПЕРСОНАЛОМ
@@ -77,8 +77,8 @@ export default function ServicesTabs() {
           ))}
         </div>
 
-        <div className="h-[80vh] animate-in fade-in slide-in-from-bottom-4 flex flex-col items-center gap-12 duration-500 lg:flex-row">
-          <div className="w-full lg:w-1/3 ml-[160px]">
+        <div className="animate-in fade-in slide-in-from-bottom-4 flex h-[80vh] flex-col items-center gap-12 duration-500 lg:flex-row">
+          <div className="ml-[160px] w-full lg:w-1/3">
             <h3 className="mb-6 text-2xl font-[300] uppercase leading-tight text-elite-black lg:text-3xl">
               {activeTab.heading}
             </h3>
@@ -95,7 +95,7 @@ export default function ServicesTabs() {
               Подробнее
             </button>
           </div>
-          <div className='relative h-full w-full lg:w-2/3 overflow-visible'>
+          <div className="relative h-full w-full overflow-visible lg:w-2/3">
             <Image
               src={activeTab.image}
               alt={activeTab.title}
@@ -103,7 +103,7 @@ export default function ServicesTabs() {
               height={1000}
               className="absolute left-0 top-0 h-full rounded-l-full"
             />
-            </div>
+          </div>
         </div>
       </div>
     </section>

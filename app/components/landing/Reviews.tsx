@@ -25,15 +25,18 @@ export default function Reviews() {
   return (
     <section className="bg-elite-light-grey py-20">
       <div className="w-full overflow-hidden">
-        <div className="mb-12 mx-auto max-w-[1200px]">
+        <div className="mx-auto mb-12 max-w-[1200px]">
           <h2 className="mb-3 text-[18px] font-[300] uppercase tracking-wider text-[#e61a66]">ОТЗЫВЫ</h2>
           <h3 className="text-[36px] font-[300] uppercase leading-[54px] lg:text-[45px]">
             <span className="gradient-text">ОТЗЫВЫ О НАС</span>
           </h3>
         </div>
-        <div className="relative w-full h-fit flex flex-row overflow-scroll gap-4 pl-[100px]">
+        <div className="relative flex h-fit w-full flex-row gap-4 overflow-scroll pl-[100px]">
           {reviews.map((review, index) => (
-            <div key={index} className="flex-shrink-0 h-full w-[60vw] flex flex-col gap-6 rounded-2xl bg-[#eee] p-10 shadow-xl">
+            <div
+              key={index}
+              className="flex h-full w-[60vw] flex-shrink-0 flex-col gap-6 rounded-2xl bg-[#eee] p-10 shadow-xl"
+            >
               <div className="text-[18px] italic leading-[28px] text-elite-black-2">{review.text}</div>
               <div>
                 <div className="text-[20px] font-[300] text-elite-black">{review.author}</div>

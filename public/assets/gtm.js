@@ -19011,7 +19011,6 @@
         }
       })
     })())
-
   ;((Y.securityGroups.read_data_layer = ['google']),
     (function () {
       function a(b, c) {
@@ -19060,7 +19059,6 @@
         return {assert: function () {}, V: a}
       })
     })())
-
   ;((Y.securityGroups.gaawe = ['google']),
     (function () {
       function a(f, g, h) {
@@ -19182,7 +19180,6 @@
         } else Yc(f.vtp_gtmOnFailure)
       })
     })())
-
   ;((Y.securityGroups.detect_link_click_events = ['google']),
     (function () {
       function a(b, c) {
@@ -19252,7 +19249,6 @@
         }
       })
     })())
-
   ;((Y.securityGroups.get_url = ['google']),
     (function () {
       function a(b, c, d) {
@@ -19293,7 +19289,6 @@
         }
       })
     })())
-
   ;((Y.securityGroups.unsafe_inject_arbitrary_html = ['google']),
     (function () {
       function a(b, c, d) {

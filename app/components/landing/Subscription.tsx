@@ -60,53 +60,51 @@ export default function Subscription() {
 
               {/* Кнопка */}
               <div className="flex">
-                             <button
-                type="submit"
-                style={{
-                  display: 'block',
-                  width: '220px',
-                  height: '60px',
-                  fontFamily: "'Gilroy', Arial, sans-serif",
-                  fontSize: '16px',
-                  fontWeight: 600,
-                  color: '#ffffff',
-                  backgroundColor: '#e61a66',
-                  border: 'none',
-                  borderRadius: '5px',
-                  cursor: 'pointer',
-                  padding: '0 15px',
-                  transition: 'background-color 0.2s ease'
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#c91659')}
-                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#e61a66')}
-              >
-                Подписаться
-              </button>
-
-              {/* Дисклеймер с иконкой */}
-              <div className="mt-3 flex items-start gap-2" style={{maxWidth: '221px', marginLeft: 'auto'}}>
-                <img
-                  src="https://static.tildacdn.com/tild6132-3135-4736-b265-393730343233/email_2_1.svg"
-                  alt=""
-                  width={19}
-                  height={19}
-                  style={{flexShrink: 0, marginTop: '1px'}}
-                />
-                <p
-                  className="text-[#828282]"
+                <button
+                  type="submit"
                   style={{
+                    display: 'block',
+                    width: '220px',
+                    height: '60px',
                     fontFamily: "'Gilroy', Arial, sans-serif",
-                    fontSize: '14px',
-                    fontWeight: 400,
-                    lineHeight: '18px'
+                    fontSize: '16px',
+                    fontWeight: 600,
+                    color: '#ffffff',
+                    backgroundColor: '#e61a66',
+                    border: 'none',
+                    borderRadius: '5px',
+                    cursor: 'pointer',
+                    padding: '0 15px',
+                    transition: 'background-color 0.2s ease'
                   }}
+                  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#c91659')}
+                  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#e61a66')}
                 >
-                  Нажимая кнопку "Подписаться", вы соглашаетесь с политикой конфиденциальности
-                </p>
-              </div>
+                  Подписаться
+                </button>
 
+                {/* Дисклеймер с иконкой */}
+                <div className="mt-3 flex items-start gap-2" style={{maxWidth: '221px', marginLeft: 'auto'}}>
+                  <img
+                    src="https://static.tildacdn.com/tild6132-3135-4736-b265-393730343233/email_2_1.svg"
+                    alt=""
+                    width={19}
+                    height={19}
+                    style={{flexShrink: 0, marginTop: '1px'}}
+                  />
+                  <p
+                    className="text-[#828282]"
+                    style={{
+                      fontFamily: "'Gilroy', Arial, sans-serif",
+                      fontSize: '14px',
+                      fontWeight: 400,
+                      lineHeight: '18px'
+                    }}
+                  >
+                    Нажимая кнопку "Подписаться", вы соглашаетесь с политикой конфиденциальности
+                  </p>
+                </div>
               </div>
- 
             </form>
           </div>
         </div>

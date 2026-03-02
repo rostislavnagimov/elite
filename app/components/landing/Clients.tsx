@@ -3,7 +3,7 @@ export default function Clients() {
     './assets/images/clients/1.jpeg',
     './assets/images/clients/2.png',
     './assets/images/clients/3.jpeg',
-    './assets/images/clients/4.jpg',
+    './assets/images/clients/4.jpg'
   ]
 
   return (
@@ -20,7 +20,6 @@ export default function Clients() {
               src={partner}
               className="flex h-24 items-center justify-center rounded-lg border border-gray-100 p-4 text-sm font-medium text-elite-grey"
             />
-
           ))}
         </div>
       </div>
