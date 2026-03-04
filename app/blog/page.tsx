@@ -1,8 +1,31 @@
-'use client'
-
+import { Metadata } from 'next'
 import Header from '../components/landing/Header'
 import Footer from '../components/landing/Footer'
+import JsonLd from '../components/JsonLd'
 import blogDataRaw from '../../blog.json'
+
+export const metadata: Metadata = {
+  title: 'Блог компании Elite | Полезные статьи о рекрутинге и карьере',
+  description: 'Читайте последние статьи о рынке труда, поиске работы и управлении персоналом в блоге кадрового агентства Elite.',
+  alternates: {
+    canonical: 'https://elite.kz/blog',
+  },
+}
+
+const blogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'Блог Elite',
+  description: 'Статьи о подборе персонала, аутсорсинге и развитии карьеры.',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Elite',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://static.tildacdn.com/tild6564-3730-4663-a262-303235323832/Elite_logo_white2.png',
+    },
+  },
+};
 
 interface BlogPost {
   title: string
@@ -17,6 +40,7 @@ const blogData = blogDataRaw as BlogPost[]
 export default function BlogPage() {
   return (
     <main className="min-h-screen bg-white">
+      <JsonLd data={blogSchema} />
       <Header />
 
       {/* Hero Section */}

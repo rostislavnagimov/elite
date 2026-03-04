@@ -9,10 +9,40 @@ import Reviews from './components/landing/Reviews'
 import News from './components/landing/News'
 import Subscription from './components/landing/Subscription'
 import Footer from './components/landing/Footer'
+import JsonLd from './components/JsonLd'
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Кадровое агентство Elite',
+  image: 'https://static.tildacdn.com/tild6564-3730-4663-a262-303235323832/Elite_logo_white2.png',
+  '@id': 'https://elite.kz',
+  url: 'https://elite.kz',
+  telephone: '+7-727-272-22-22',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'ул. Желтоксан, 115',
+    addressLocality: 'Алматы',
+    postalCode: '050000',
+    addressCountry: 'KZ',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 43.2551,
+    longitude: 76.9419,
+  },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '09:00',
+    closes: '18:00',
+  },
+};
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col gap-4">
+      <JsonLd data={localBusinessSchema} />
       <Header />
       <Hero />
       <About />
