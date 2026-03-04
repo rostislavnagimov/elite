@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import {usePathname} from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 export default function Header() {
   const pathname = usePathname()
@@ -48,38 +48,40 @@ export default function Header() {
                   />
                 </svg>
               </Link>
-              {/* Dropdown Menu */}
-              <div className="absolute left-0 top-full mt-2 hidden w-[250px] flex-col rounded-md bg-white p-2 shadow-[0_4px_12px_rgba(0,0,0,0.1)] group-hover:flex">
-                <Link
-                  href="/aboutus"
-                  className={`rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] transition-colors hover:bg-gray-50 hover:text-[#e61a66] ${pathname === '/aboutus' ? 'bg-gray-50 text-[#e61a66]' : 'text-[#26262b]'}`}
-                >
-                  О компании
-                </Link>
-                <Link
-                  href="/outstaffing"
-                  className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
-                >
-                  Аутстаффинг
-                </Link>
-                <Link
-                  href="/outsourcing"
-                  className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
-                >
-                  Аутсорсинг персонала
-                </Link>
-                <Link
-                  href="/podbor-personala"
-                  className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
-                >
-                  Подбор персонала
-                </Link>
-                <Link
-                  href="/obzor-rynka-truda-i-zarabotanyh-plat"
-                  className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
-                >
-                  Обзоры рынка
-                </Link>
+              {/* Dropdown Menu Wrapper */}
+              <div className="absolute left-0 top-full hidden pt-2 group-hover:block">
+                <div className="flex w-[250px] flex-col rounded-md bg-white p-2 shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
+                  <Link
+                    href="/aboutus"
+                    className={`rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] transition-colors hover:bg-gray-50 hover:text-[#e61a66] ${pathname === '/aboutus' ? 'bg-gray-50 text-[#e61a66]' : 'text-[#26262b]'}`}
+                  >
+                    О компании
+                  </Link>
+                  <Link
+                    href="/outstaffing"
+                    className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
+                  >
+                    Аутстаффинг
+                  </Link>
+                  <Link
+                    href="/outsourcing"
+                    className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
+                  >
+                    Аутсорсинг персонала
+                  </Link>
+                  <Link
+                    href="/podbor-personala"
+                    className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
+                  >
+                    Подбор персонала
+                  </Link>
+                  <Link
+                    href="/obzor-rynka-truda-i-zarabotanyh-plat"
+                    className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
+                  >
+                    Обзоры рынка
+                  </Link>
+                </div>
               </div>
             </li>
             <li className="group relative px-[15px]">
@@ -105,46 +107,47 @@ export default function Header() {
                   />
                 </svg>
               </Link>
-              {/* Dropdown Menu */}
-              <div className="absolute left-0 top-full mt-2 hidden w-[250px] flex-col rounded-md bg-white p-2 shadow-[0_4px_12px_rgba(0,0,0,0.1)] group-hover:flex">
-                <Link
-                  href="/aboutus"
-                  className={`rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] transition-colors hover:bg-gray-50 hover:text-[#e61a66] ${pathname === '/aboutus' ? 'bg-gray-50 text-[#e61a66]' : 'text-[#26262b]'}`}
-                >
-                  О компании
-                </Link>
-                <Link
-                  href="/vacancy"
-                  className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
-                >
-                  Все вакансии
-                </Link>
-                <Link
-                  href="/sendresume"
-                  className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
-                >
-                  Отправить резюме
-                </Link>
-                <Link
-                  href="/careercounseling"
-                  className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
-                >
-                  Карьерное консультирование
-                </Link>
-                <Link
-                  href="/career"
-                  className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
-                >
-                  Карьера в Elite
-                </Link>
+              {/* Dropdown Menu Wrapper */}
+              <div className="absolute left-0 top-full hidden pt-2 group-hover:block">
+                <div className="flex w-[250px] flex-col rounded-md bg-white p-2 shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
+                  <Link
+                    href="/aboutus"
+                    className={`rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] transition-colors hover:bg-gray-50 hover:text-[#e61a66] ${pathname === '/aboutus' ? 'bg-gray-50 text-[#e61a66]' : 'text-[#26262b]'}`}
+                  >
+                    О компании
+                  </Link>
+                  <Link
+                    href="/vacancy"
+                    className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
+                  >
+                    Все вакансии
+                  </Link>
+                  <Link
+                    href="/sendresume"
+                    className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
+                  >
+                    Отправить резюме
+                  </Link>
+                  <Link
+                    href="/careercounseling"
+                    className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
+                  >
+                    Карьерное консультирование
+                  </Link>
+                  <Link
+                    href="/career"
+                    className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
+                  >
+                    Карьера в Elite
+                  </Link>
+                </div>
               </div>
             </li>
             <li className="px-[15px]">
               <Link
                 href="/blog"
-                className={`whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium transition-colors hover:text-[#e61a66] ${
-                  pathname === '/blog' ? 'border-b-2 border-[#e61a66] pb-1 text-[#e61a66]' : 'text-[#26262b]'
-                }`}
+                className={`whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium transition-colors hover:text-[#e61a66] ${pathname === '/blog' ? 'border-b-2 border-[#e61a66] pb-1 text-[#e61a66]' : 'text-[#26262b]'
+                  }`}
               >
                 Блог
               </Link>
@@ -152,9 +155,8 @@ export default function Header() {
             <li className="pl-[15px]">
               <Link
                 href="/contact"
-                className={`whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium transition-colors hover:text-[#e61a66] ${
-                  pathname === '/contact' ? 'border-b-2 border-[#e61a66] pb-1 text-[#e61a66]' : 'text-[#26262b]'
-                }`}
+                className={`whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium transition-colors hover:text-[#e61a66] ${pathname === '/contact' ? 'border-b-2 border-[#e61a66] pb-1 text-[#e61a66]' : 'text-[#26262b]'
+                  }`}
               >
                 Контакты
               </Link>

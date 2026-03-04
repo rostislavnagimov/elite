@@ -32,6 +32,7 @@ interface BlogPost {
   image: string
   text: string
   link: string
+  slug: string
   tag?: string
 }
 
@@ -71,9 +72,7 @@ export default function BlogPage() {
                 className="group flex flex-col overflow-hidden rounded-[30px] bg-[#F5F5F5] transition-all duration-300"
               >
                 <a
-                  href={post.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={`/blog/${post.slug}`}
                   className="flex h-full flex-col focus:outline-none"
                 >
                   {/* Image area */}
