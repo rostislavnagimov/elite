@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col gap-8">
           <Link href="/">
             <Image
-              src="/assets/Elite_logo-light.svg"
+              src="/assets/images/Elite_logo_1_1.svg"
               alt="Elite Logo"
               width={120}
               height={45}

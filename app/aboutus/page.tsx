@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+import {Metadata} from 'next'
 import Header from '../components/landing/Header'
 import Footer from '../components/landing/Footer'
 import JsonLd from '../components/JsonLd'
@@ -7,10 +7,11 @@ import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'О компании Elite | Кадровый Холдинг в Казахстане',
-  description: 'Кадровый Холдинг Elite — одна из первых кадровых компаний на рынке Республики Казахстан. Более 28 лет опыта в HR-консалтинге и подборе персонала.',
+  description:
+    'Кадровый Холдинг Elite — одна из первых кадровых компаний на рынке Республики Казахстан. Более 28 лет опыта в HR-консалтинге и подборе персонала.',
   alternates: {
-    canonical: 'https://elite.kz/about',
-  },
+    canonical: 'https://elite.kz/about'
+  }
 }
 
 const aboutSchema = {
@@ -19,9 +20,9 @@ const aboutSchema = {
   mainEntity: {
     '@type': 'Organization',
     name: 'Elite',
-    url: 'https://elite.kz',
-  },
-};
+    url: 'https://elite.kz'
+  }
+}
 
 export default function AboutUsPage() {
   return (
@@ -108,10 +109,10 @@ export default function AboutUsPage() {
         <div className="mx-auto max-w-[1240px]">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { val: '700', label: 'Довольных клиентов' },
-              { val: '28', label: 'Лет на рынке рекрутинга' },
-              { val: '1000', label: 'Успешных проектов' },
-              { val: '216', label: 'Сотрудников в компании' }
+              {val: '700', label: 'Довольных клиентов'},
+              {val: '28', label: 'Лет на рынке рекрутинга'},
+              {val: '1000', label: 'Успешных проектов'},
+              {val: '216', label: 'Сотрудников в компании'}
             ].map((stat, i) => (
               <div
                 key={i}

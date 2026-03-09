@@ -32,7 +32,7 @@ export default function Subscription() {
           </div>
 
           {/* Правая часть: форма */}
-          <div style={{width: '460px', flexShrink: 0}}>
+          <div style={{maxWidth: '460px', flexShrink: 0}}>
             <form className="flex flex-col gap-0">
               {/* Email инпут */}
               <div style={{marginBottom: '20px'}}>
@@ -84,7 +84,7 @@ export default function Subscription() {
                 </button>
 
                 {/* Дисклеймер с иконкой */}
-                <div className="mt-3 flex items-start gap-2" style={{maxWidth: '221px', marginLeft: 'auto'}}>
+                <div className="mt-3 flex items-start gap-2 pl-2" style={{maxWidth: '221px', marginLeft: 'auto'}}>
                   <img
                     src="https://static.tildacdn.com/tild6132-3135-4736-b265-393730343233/email_2_1.svg"
                     alt=""

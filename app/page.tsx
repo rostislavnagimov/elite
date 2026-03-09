@@ -1,3 +1,4 @@
+'use client'
 import Header from './components/landing/Header'
 import Hero from './components/landing/Hero'
 import About from './components/landing/About'
@@ -10,6 +11,9 @@ import News from './components/landing/News'
 import Subscription from './components/landing/Subscription'
 import Footer from './components/landing/Footer'
 import JsonLd from './components/JsonLd'
+
+import {useState, useEffect} from 'react'
+import {Popup} from './components/popup'
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -24,24 +28,36 @@ const localBusinessSchema = {
     streetAddress: 'ул. Желтоксан, 115',
     addressLocality: 'Алматы',
     postalCode: '050000',
-    addressCountry: 'KZ',
+    addressCountry: 'KZ'
   },
   geo: {
     '@type': 'GeoCoordinates',
     latitude: 43.2551,
-    longitude: 76.9419,
+    longitude: 76.9419
   },
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
     opens: '09:00',
-    closes: '18:00',
-  },
-};
+    closes: '18:00'
+  }
+}
 
 export default function Home() {
+  const [popupConfig, setPopupConfig] = useState<{type: string; data?: any} | null>(null)
+
+  useEffect(() => {
+    window.showPopup = (type?: string, data?: any) => {
+      if (!type) {
+        setPopupConfig(null)
+      } else {
+        setPopupConfig({type, data})
+      }
+    }
+  }, [])
   return (
-    <main className="flex min-h-screen flex-col gap-4">
+    <main className="flex min-h-screen w-full flex-col gap-4">
+      {popupConfig && <Popup type={popupConfig.type} data={popupConfig.data} />}
       <JsonLd data={localBusinessSchema} />
       <Header />
       <Hero />

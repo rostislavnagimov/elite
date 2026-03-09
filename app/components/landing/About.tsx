@@ -71,7 +71,7 @@ export default function About() {
 
         {/* Right image — large, pill shape, absolutely positioned */}
         <div
-          className="absolute right-[-30%] top-[110px] z-0 hidden lg:block"
+          className="absolute right-[-30%] top-[110px] hidden lg:block"
           style={{
             width: '1070px',
             height: '550px',
@@ -89,11 +89,11 @@ export default function About() {
 
           {/* Video button — rotating circle + play, positioned inside the image area */}
           <div className="absolute" style={{top: '245px', left: '160px'}}>
-            <Link
-              href="#popup:youtubevideo"
+            <button
+              onClick={() => window.showPopup('video')}
               role="button"
               aria-haspopup="dialog"
-              className="group relative block h-[170px] w-[170px]"
+              className="group relative z-[50] block h-[170px] w-[170px] cursor-pointer"
             >
               {/* Rotating circle text */}
               <div className="absolute inset-0 animate-spin" style={{animationDuration: '15s'}}>
@@ -116,7 +116,7 @@ export default function About() {
                   unoptimized
                 />
               </div>
-            </Link>
+            </button>
           </div>
         </div>
 

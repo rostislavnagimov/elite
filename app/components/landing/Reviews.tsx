@@ -31,7 +31,7 @@ export default function Reviews() {
             <span className="gradient-text">ОТЗЫВЫ О НАС</span>
           </h3>
         </div>
-        <div className="relative flex h-fit w-full flex-row gap-4 overflow-scroll pl-[100px]">
+        <div className="relative flex h-fit w-full flex-row gap-4 overflow-scroll px-[100px] pb-[30px]">
           {reviews.map((review, index) => (
             <div
               key={index}

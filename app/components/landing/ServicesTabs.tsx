@@ -77,13 +77,13 @@ export default function ServicesTabs() {
           ))}
         </div>
 
-        <div className="animate-in fade-in slide-in-from-bottom-4 flex h-[80vh] flex-col items-center gap-12 duration-500 lg:flex-row">
-          <div className="ml-[160px] w-full lg:w-1/3">
+        <div className="animate-in fade-in slide-in-from-bottom-4 flex h-[70vh] flex-col items-center gap-2 duration-500 lg:flex-row">
+          <div className="w-full lg:ml-[160px] lg:w-1/3">
             <h3 className="mb-6 text-2xl font-[300] uppercase leading-tight text-elite-black lg:text-3xl">
               {activeTab.heading}
             </h3>
             <p className="mb-8 text-lg leading-relaxed text-gray-600">{activeTab.description}</p>
-            <ul className="space-y-4">
+            <ul className="space-y-2">
               {activeTab.list.map((item, index) => (
                 <li key={index} className="flex items-start gap-4">
                   <div className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#e61a66]" />
@@ -95,7 +95,7 @@ export default function ServicesTabs() {
               Подробнее
             </button>
           </div>
-          <div className="relative h-full w-full overflow-visible lg:w-2/3">
+          <div className="relative hidden h-full overflow-visible lg:block lg:w-2/3">
             <Image
               src={activeTab.image}
               alt={activeTab.title}

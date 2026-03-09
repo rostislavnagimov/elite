@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+import {Metadata} from 'next'
 import Header from '../components/landing/Header'
 import Footer from '../components/landing/Footer'
 import JsonLd from '../components/JsonLd'
@@ -6,10 +6,11 @@ import blogDataRaw from '../../blog.json'
 
 export const metadata: Metadata = {
   title: 'Блог компании Elite | Полезные статьи о рекрутинге и карьере',
-  description: 'Читайте последние статьи о рынке труда, поиске работы и управлении персоналом в блоге кадрового агентства Elite.',
+  description:
+    'Читайте последние статьи о рынке труда, поиске работы и управлении персоналом в блоге кадрового агентства Elite.',
   alternates: {
-    canonical: 'https://elite.kz/blog',
-  },
+    canonical: 'https://elite.kz/blog'
+  }
 }
 
 const blogSchema = {
@@ -22,10 +23,10 @@ const blogSchema = {
     name: 'Elite',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://static.tildacdn.com/tild6564-3730-4663-a262-303235323832/Elite_logo_white2.png',
-    },
-  },
-};
+      url: 'https://static.tildacdn.com/tild6564-3730-4663-a262-303235323832/Elite_logo_white2.png'
+    }
+  }
+}
 
 interface BlogPost {
   title: string
@@ -71,10 +72,7 @@ export default function BlogPage() {
                 key={index}
                 className="group flex flex-col overflow-hidden rounded-[30px] bg-[#F5F5F5] transition-all duration-300"
               >
-                <a
-                  href={`/blog/${post.slug}`}
-                  className="flex h-full flex-col focus:outline-none"
-                >
+                <a href={`/blog/${post.slug}`} className="flex h-full flex-col focus:outline-none">
                   {/* Image area */}
                   <div className="relative aspect-[360/277] w-full overflow-hidden rounded-t-[30px]">
                     <img

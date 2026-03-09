@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+import {Metadata} from 'next'
 import Header from '../components/landing/Header'
 import Footer from '../components/landing/Footer'
 import Link from 'next/link'
@@ -6,10 +6,11 @@ import JsonLd from '../components/JsonLd'
 
 export const metadata: Metadata = {
   title: 'Карьерное консультирование | Кадровый Холдинг Elite',
-  description: 'Кадровый Холдинг Elite приглашает вас пройти карьерное консультирование. Мы поможем вам начать головокружительную карьеру прямо сейчас.',
+  description:
+    'Кадровый Холдинг Elite приглашает вас пройти карьерное консультирование. Мы поможем вам начать головокружительную карьеру прямо сейчас.',
   alternates: {
-    canonical: 'https://elite.kz/careercounseling',
-  },
+    canonical: 'https://elite.kz/careercounseling'
+  }
 }
 
 const serviceSchema = {
@@ -20,21 +21,21 @@ const serviceSchema = {
   provider: {
     '@type': 'Organization',
     name: 'Elite',
-    url: 'https://elite.kz',
+    url: 'https://elite.kz'
   },
   areaServed: {
     '@type': 'State',
-    name: 'Казахстан',
+    name: 'Казахстан'
   },
-  description: 'Помощь в поиске работы, анализ резюме, подготовка к собеседованию и сопровождение поиска работы.',
-};
+  description: 'Помощь в поиске работы, анализ резюме, подготовка к собеседованию и сопровождение поиска работы.'
+}
 
 export default function CareerCounselingPage() {
   const stats = [
-    { val: '11 000', label: 'Трудоустроенных кандидатов' },
-    { val: '27', label: 'Лет на рынке' },
-    { val: '1000', label: 'Успешных проектов' },
-    { val: '216', label: 'Сотрудников в компании' }
+    {val: '11 000', label: 'Трудоустроенных кандидатов'},
+    {val: '27', label: 'Лет на рынке'},
+    {val: '1000', label: 'Успешных проектов'},
+    {val: '216', label: 'Сотрудников в компании'}
   ]
 
   const values = [

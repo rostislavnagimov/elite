@@ -1,0 +1,135 @@
+{
+  "categories": [
+    {
+      "name": "IT, Интернет, Телеком",
+      "slug": "vacancies-it",
+      "vacancies": [
+        {
+          "title": "Инженер-программист",
+          "city": "АЛМАТЫ",
+          "experience": "ОТ 3 ЛЕТ",
+          "education": "ВЫСШЕЕ ТЕХНИЧЕСКОЕ",
+          "details": "Подробное описание для инженера-программиста."
+        },
+        {
+          "title": "Старший инженер-программист",
+          "city": "АЛМАТЫ",
+          "experience": "ОТ 5 ЛЕТ",
+          "education": "ВЫСШЕЕ ТЕХНИЧЕСКОЕ",
+          "details": "Подробное описание для старшего инженера-программиста."
+        },
+        {
+          "title": "Java-разработчик",
+          "city": "АЛМАТЫ",
+          "experience": "ОТ 3 ЛЕТ JAVA",
+          "education": "ВЫСШЕЕ",
+          "details": "Подробное описание для Java-разработчика."
+        }
+      ]
+    },
+    {
+      "name": "Административный персонал",
+      "slug": "administrativnyy-personal",
+      "vacancies": [
+        {
+          "title": "Офис-менеджер",
+          "city": "АЛМАТЫ",
+          "experience": "ОТ 1 ГОДА",
+          "education": "СРЕДНЕ-СПЕЦИАЛЬНОЕ",
+          "details": "Подробное описание для офис-менеджера."
+        }
+      ]
+    },
+    {
+      "name": "Банки, инвестиции, лизинг",
+      "slug": "banki-investitsii-lizing",
+      "vacancies": []
+    },
+    {
+      "name": "Бухгалтерия, финансы, аудит",
+      "slug": "bukhgalteriya-finansy-audit",
+      "vacancies": [
+        {
+          "title": "Главный бухгалтер",
+          "city": "АЛМАТЫ",
+          "experience": "ОТ 6 ЛЕТ",
+          "education": "ВЫСШЕЕ",
+          "details": "Подробное описание для главного бухгалтера."
+        }
+      ]
+    },
+    {
+      "name": "Добыча сырья",
+      "slug": "dobycha-syrya",
+      "vacancies": []
+    },
+    {
+      "name": "Логистика, транспорт",
+      "slug": "logistika-transport",
+      "vacancies": []
+    },
+    {
+      "name": "Маркетинг, реклама, PR",
+      "slug": "marketing-reklama-pr",
+      "vacancies": []
+    },
+    {
+      "name": "Медицина, фармацевтика",
+      "slug": "meditsina-farmatsevtika",
+      "vacancies": []
+    },
+    {
+      "name": "Образование",
+      "slug": "obrazovaniye",
+      "vacancies": []
+    },
+    {
+      "name": "Продажи",
+      "slug": "prodazhi",
+      "vacancies": [
+        {
+          "title": "Менеджер по продажам",
+          "city": "АЛМАТЫ",
+          "experience": "ОТ 2 ЛЕТ",
+          "education": "ВЫСШЕЕ",
+          "details": "Подробное описание для менеджера по продажам."
+        }
+      ]
+    },
+    {
+      "name": "Производство",
+      "slug": "proizvodstvo",
+      "vacancies": []
+    },
+    {
+      "name": "Строительство",
+      "slug": "stroitelstvo",
+      "vacancies": []
+    },
+    {
+      "name": "Технические",
+      "slug": "tekhnicheskiye",
+      "vacancies": []
+    },
+    {
+      "name": "Топ-менеджмент",
+      "slug": "top-management",
+      "vacancies": []
+    },
+    {
+      "name": "Управление персоналом, HR",
+      "slug": "upravleniye-personalom-hr",
+      "vacancies": []
+    },
+    {
+      "name": "Юриспруденция",
+      "slug": "yurisprudentsiya",
+      "vacancies": []
+    },
+    {
+      "name": "Начинающим специалистам",
+      "slug": "nachinayushchim-spetsialistam",
+      "vacancies": []
+    }
+  ]
+}

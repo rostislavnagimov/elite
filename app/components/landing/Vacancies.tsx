@@ -53,7 +53,7 @@ export default function Vacancies() {
         </p>
 
         {/* Категории: 2 колонки */}
-        <div className="flex gap-0 pb-20">
+        <div className="flex flex-col gap-0 pb-20 lg:flex-row">
           <div className="flex-1">
             {leftColumn.map((item) => (
               <div key={item.href}>

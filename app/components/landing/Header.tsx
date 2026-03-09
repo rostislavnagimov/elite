@@ -2,14 +2,13 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import {usePathname} from 'next/navigation'
 
 export default function Header() {
   const pathname = usePathname()
   return (
-    <header className="fixed top-0 z-50 w-full bg-white shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+    <header className="z-100 fixed top-0 w-full max-w-[100vw] bg-white shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
       <div className="mx-auto flex h-[80px] max-w-[1200px] items-center justify-between gap-4 px-5">
-        {/* Logo */}
         <div className="flex-shrink-0">
           <Link href="/">
             <Image
@@ -22,7 +21,6 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Nav — center */}
         <nav className="hidden items-center lg:flex">
           <ul className="m-0 flex list-none items-center p-0">
             <li className="group relative pr-[15px]">
@@ -48,7 +46,6 @@ export default function Header() {
                   />
                 </svg>
               </Link>
-              {/* Dropdown Menu Wrapper */}
               <div className="absolute left-0 top-full hidden pt-2 group-hover:block">
                 <div className="flex w-[250px] flex-col rounded-md bg-white p-2 shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
                   <Link
@@ -81,6 +78,12 @@ export default function Header() {
                   >
                     Обзоры рынка
                   </Link>
+                  <Link
+                    href="/reviews"
+                    className="rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b] transition-colors hover:bg-gray-50 hover:text-[#e61a66]"
+                  >
+                    Отзывы
+                  </Link>
                 </div>
               </div>
             </li>
@@ -107,7 +110,6 @@ export default function Header() {
                   />
                 </svg>
               </Link>
-              {/* Dropdown Menu Wrapper */}
               <div className="absolute left-0 top-full hidden pt-2 group-hover:block">
                 <div className="flex w-[250px] flex-col rounded-md bg-white p-2 shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
                   <Link
@@ -146,8 +148,9 @@ export default function Header() {
             <li className="px-[15px]">
               <Link
                 href="/blog"
-                className={`whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium transition-colors hover:text-[#e61a66] ${pathname === '/blog' ? 'border-b-2 border-[#e61a66] pb-1 text-[#e61a66]' : 'text-[#26262b]'
-                  }`}
+                className={`whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium transition-colors hover:text-[#e61a66] ${
+                  pathname === '/blog' ? 'border-b-2 border-[#e61a66] pb-1 text-[#e61a66]' : 'text-[#26262b]'
+                }`}
               >
                 Блог
               </Link>
@@ -155,8 +158,9 @@ export default function Header() {
             <li className="pl-[15px]">
               <Link
                 href="/contact"
-                className={`whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium transition-colors hover:text-[#e61a66] ${pathname === '/contact' ? 'border-b-2 border-[#e61a66] pb-1 text-[#e61a66]' : 'text-[#26262b]'
-                  }`}
+                className={`whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium transition-colors hover:text-[#e61a66] ${
+                  pathname === '/contact' ? 'border-b-2 border-[#e61a66] pb-1 text-[#e61a66]' : 'text-[#26262b]'
+                }`}
               >
                 Контакты
               </Link>
@@ -278,13 +282,13 @@ export default function Header() {
           </a>
 
           {/* CTA button */}
-          <a
-            href="#popup:zvonok"
+          <button
             role="button"
             className="whitespace-nowrap rounded-[5px] bg-[#e61a66] px-5 py-2 font-[Gilroy,sans-serif] text-[14px] font-medium text-white transition-colors hover:bg-[#c91659]"
+            onClick={() => window.showPopup()}
           >
             Заказать звонок
-          </a>
+          </button>
         </div>
 
         {/* Mobile burger */}

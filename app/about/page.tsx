@@ -1,14 +1,15 @@
-import { Metadata } from 'next'
+import {Metadata} from 'next'
 import Header from '../components/landing/Header'
 import Footer from '../components/landing/Footer'
 import JsonLd from '../components/JsonLd'
 
 export const metadata: Metadata = {
   title: 'О компании - соискателям | Elite',
-  description: 'Кадровый Холдинг Elite приглашает вас стать одним из наших сотрудников. Одна из первых кадровых компаний на рынке Республики Казахстан.',
+  description:
+    'Кадровый Холдинг Elite приглашает вас стать одним из наших сотрудников. Одна из первых кадровых компаний на рынке Республики Казахстан.',
   alternates: {
-    canonical: 'https://elite.kz/about',
-  },
+    canonical: 'https://elite.kz/about'
+  }
 }
 
 const aboutSchema = {
@@ -17,9 +18,9 @@ const aboutSchema = {
   mainEntity: {
     '@type': 'Organization',
     name: 'Elite',
-    url: 'https://elite.kz',
-  },
-};
+    url: 'https://elite.kz'
+  }
+}
 
 export default function AboutPage() {
   return (
