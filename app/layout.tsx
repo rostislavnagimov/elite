@@ -1,9 +1,11 @@
-import type {Metadata} from 'next'
-import {Geist, Geist_Mono} from 'next/font/google'
+import type { Metadata } from 'next'
+import { Geist, Geist_Mono } from 'next/font/google'
 import RevealInit from './components/RevealInit'
+import GlobalPopupProvider from './components/GlobalPopupProvider'
 import JsonLd from './components/JsonLd'
+import Header from './components/landing/Header'
+import Footer from './components/landing/Footer'
 import './globals.css'
-
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin']
@@ -86,7 +88,11 @@ export default function RootLayout({
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
         <RevealInit />
-        {children}
+        <GlobalPopupProvider>
+          <Header />
+          {children}
+          <Footer />
+        </GlobalPopupProvider>
       </body>
     </html>
   )

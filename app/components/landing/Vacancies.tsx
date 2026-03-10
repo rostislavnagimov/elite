@@ -3,31 +3,40 @@
 import Link from 'next/link'
 
 const leftColumn = [
-  {label: 'It/интернет/телеком', href: '/vacancies-it'},
-  {label: 'Административный персонал', href: '/administrativnyy-personal'},
-  {label: 'Банки/инвестиции/лизинг', href: '/banki-investitsii-lizing'},
-  {label: 'Бухгалтерия/финансы/аудит', href: '/bukhgalteriya-finansy-audit'},
-  {label: 'Добыча сырья', href: '/dobycha-syrya'},
-  {label: 'Логистика/транспорт', href: '/logistika-transport'},
-  {label: 'Маркетинг/реклама/pr', href: '/marketing-reklama-pr'},
-  {label: 'Медицина, фармацевтика', href: '/meditsina-farmatsevtika'},
-  {label: 'Начинающим специалистам', href: '/nachinayushchim-spetsialistam'}
+  { label: 'It/интернет/телеком', href: '/vacancies-it' },
+  { label: 'Административный персонал', href: '/administrativnyy-personal' },
+  { label: 'Банки/инвестиции/лизинг', href: '/banki-investitsii-lizing' },
+  { label: 'Бухгалтерия/финансы/аудит', href: '/bukhgalteriya-finansy-audit' },
+  { label: 'Добыча сырья', href: '/dobycha-syrya' },
+  { label: 'Логистика/транспорт', href: '/logistika-transport' },
+  { label: 'Маркетинг/реклама/pr', href: '/marketing-reklama-pr' },
+  { label: 'Медицина, фармацевтика', href: '/meditsina-farmatsevtika' },
+  { label: 'Начинающим специалистам', href: '/nachinayushchim-spetsialistam' }
 ]
 
 const rightColumn = [
-  {label: 'Образование', href: '/obrazovaniye'},
-  {label: 'Продажи', href: '/prodazhi'},
-  {label: 'Производство', href: '/proizvodstvo'},
-  {label: 'Строительство', href: '/stroitelstvo'},
-  {label: 'Технические', href: '/tekhnicheskiye'},
-  {label: 'Топ-менеджмент', href: '/top-management'},
-  {label: 'Управление персоналом/hr', href: '/upravleniye-personalom-hr'},
-  {label: 'Юриспруденция', href: '/yurisprudentsiya'}
+  { label: 'Образование', href: '/obrazovaniye' },
+  { label: 'Продажи', href: '/prodazhi' },
+  { label: 'Производство', href: '/proizvodstvo' },
+  { label: 'Строительство', href: '/stroitelstvo' },
+  { label: 'Технические', href: '/tekhnicheskiye' },
+  { label: 'Топ-менеджмент', href: '/top-management' },
+  { label: 'Управление персоналом/hr', href: '/upravleniye-personalom-hr' },
+  { label: 'Юриспруденция', href: '/yurisprudentsiya' }
 ]
 
-const latestJobs = [{title: 'АНАЛИТИК-ТЕСТИРОВЩИК'}, {title: 'JAVA-РАЗРАБОТЧИК'}, {title: 'МЕНЕДЖЕР ПО ПРОДАЖАМ УСЛУГ'}]
+import vacanciesData from '../../../vacancies.json'
+import { Vacancy, VacancyCard } from '../vacancies/VacancyCard'
+import { VacancyModal } from '../vacancies/VacancyModal'
+import { useState } from 'react'
 
 export default function Vacancies() {
+  const [selectedVacancy, setSelectedVacancy] = useState<Vacancy | null>(null)
+
+  // Extract all vacancies and take the first 3
+  const allVacancies = Object.values(vacanciesData).flat() as Vacancy[]
+  const latestJobs = allVacancies.slice(0, 3)
+
   return (
     <section className="bg-white">
       {/* ── Верхняя белая часть: заголовок + описание + категории ── */}
@@ -110,7 +119,7 @@ export default function Vacancies() {
         }}
       >
         {/* Бегущая строка у нижнего края фото */}
-        <div className="absolute bottom-0 left-0 right-0 overflow-hidden" style={{height: '98px'}}>
+        <div className="absolute bottom-0 left-0 right-0 overflow-hidden" style={{ height: '98px' }}>
           <div
             style={{
               display: 'inline-block',
@@ -123,7 +132,7 @@ export default function Vacancies() {
               color: '#fff9'
             }}
           >
-            {Array.from({length: 14}).map((_, i) => (
+            {Array.from({ length: 14 }).map((_, i) => (
               <span key={i}>
                 <strong>ВАКАНСИИ </strong>ВАКАНСИИ{' '}
               </span>
@@ -151,20 +160,18 @@ export default function Vacancies() {
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {latestJobs.map((job, index) => (
-            <div
-              key={index}
-              className="flex flex-col gap-6 rounded-xl border border-gray-100 p-8 shadow-sm transition-shadow hover:shadow-md"
-            >
-              <h3 className="text-xl font-[300] text-elite-black">{job.title}</h3>
-              <Link
-                href="#"
-                className="inline-block rounded-lg bg-[#e61a66] py-3 text-center font-[300] text-white transition-colors hover:bg-[#c91659]"
-              >
-                Узнать подробнее
-              </Link>
-            </div>
+            <VacancyCard
+              key={`${job.Название}-${index}`}
+              vacancy={job}
+              onSelect={setSelectedVacancy}
+            />
           ))}
         </div>
+
+        <VacancyModal
+          vacancy={selectedVacancy}
+          onClose={() => setSelectedVacancy(null)}
+        />
       </div>
     </section>
   )

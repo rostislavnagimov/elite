@@ -1,6 +1,4 @@
 import {Metadata} from 'next'
-import Header from '../components/landing/Header'
-import Footer from '../components/landing/Footer'
 import JsonLd from '../components/JsonLd'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -28,8 +26,7 @@ export default function AboutUsPage() {
   return (
     <main className="min-h-screen bg-white">
       <JsonLd data={aboutSchema} />
-      <Header />
-
+      
       {/* Hero Section */}
       <section className="px-5 pb-20 pt-[140px]">
         <div className="mx-auto max-w-[1240px]">
@@ -130,7 +127,6 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <Footer />
-    </main>
+          </main>
   )
 }

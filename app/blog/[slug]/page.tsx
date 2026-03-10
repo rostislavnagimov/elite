@@ -1,6 +1,4 @@
 import {Metadata} from 'next'
-import Header from '../../components/landing/Header'
-import Footer from '../../components/landing/Footer'
 import blogDataRaw from '../../../blog.json'
 import {notFound} from 'next/navigation'
 
@@ -43,8 +41,7 @@ export default async function BlogPostPage({params}: {params: Promise<{slug: str
 
   return (
     <main className="min-h-screen bg-white">
-      <Header />
-
+      
       <article className="pb-24 pt-[140px]">
         {/* Post Header */}
         <div className="mx-auto max-w-[1240px] px-5">
@@ -75,7 +72,6 @@ export default async function BlogPostPage({params}: {params: Promise<{slug: str
         </div>
       </article>
 
-      <Footer />
-    </main>
+          </main>
   )
 }

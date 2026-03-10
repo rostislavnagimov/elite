@@ -1,9 +1,19 @@
-export default function PlaceholderPage() {
+import { VacancyList } from '../components/vacancies/VacancyList';
+import vacanciesData from '../../vacancies.json';
+
+export default function VacanciesPage() {
+  const categorySlug = 'tekhnicheskiye';
+  // @ts-ignore
+  const categoryVacancies = vacanciesData[categorySlug] || [];
+
   return (
-    <div className="flex min-h-screen items-center justify-center p-8 pt-[120px]">
-      <h1 className="text-center font-[Gilroy,sans-serif] text-3xl font-bold text-[#26262b]">
-        Страница в разработке: /tekhnicheskiye
-      </h1>
+    <div className="flex min-h-screen flex-col items-center bg-white p-4 pt-[120px] md:p-8 md:pt-[120px]">
+      <div className="w-full max-w-[1200px]">
+        <h1 className="mb-8 text-center font-[Gilroy,sans-serif] text-3xl font-bold text-[#26262b] md:text-5xl">
+          Технические специальности
+        </h1>
+        <VacancyList vacancies={categoryVacancies} categoryName="Технические специальности" />
+      </div>
     </div>
-  )
+  );
 }

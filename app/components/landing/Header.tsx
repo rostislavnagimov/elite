@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import {usePathname} from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 export default function Header() {
   const pathname = usePathname()
@@ -148,9 +148,8 @@ export default function Header() {
             <li className="px-[15px]">
               <Link
                 href="/blog"
-                className={`whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium transition-colors hover:text-[#e61a66] ${
-                  pathname === '/blog' ? 'border-b-2 border-[#e61a66] pb-1 text-[#e61a66]' : 'text-[#26262b]'
-                }`}
+                className={`whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium transition-colors hover:text-[#e61a66] ${pathname === '/blog' ? 'border-b-2 border-[#e61a66] pb-1 text-[#e61a66]' : 'text-[#26262b]'
+                  }`}
               >
                 Блог
               </Link>
@@ -158,9 +157,8 @@ export default function Header() {
             <li className="pl-[15px]">
               <Link
                 href="/contact"
-                className={`whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium transition-colors hover:text-[#e61a66] ${
-                  pathname === '/contact' ? 'border-b-2 border-[#e61a66] pb-1 text-[#e61a66]' : 'text-[#26262b]'
-                }`}
+                className={`whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium transition-colors hover:text-[#e61a66] ${pathname === '/contact' ? 'border-b-2 border-[#e61a66] pb-1 text-[#e61a66]' : 'text-[#26262b]'
+                  }`}
               >
                 Контакты
               </Link>
@@ -285,7 +283,7 @@ export default function Header() {
           <button
             role="button"
             className="whitespace-nowrap rounded-[5px] bg-[#e61a66] px-5 py-2 font-[Gilroy,sans-serif] text-[14px] font-medium text-white transition-colors hover:bg-[#c91659]"
-            onClick={() => window.showPopup()}
+            onClick={() => window.showPopup('callback')}
           >
             Заказать звонок
           </button>

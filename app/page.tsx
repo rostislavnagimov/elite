@@ -12,8 +12,7 @@ import Subscription from './components/landing/Subscription'
 import Footer from './components/landing/Footer'
 import JsonLd from './components/JsonLd'
 
-import {useState, useEffect} from 'react'
-import {Popup} from './components/popup'
+import { useState, useEffect } from 'react'
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -44,22 +43,9 @@ const localBusinessSchema = {
 }
 
 export default function Home() {
-  const [popupConfig, setPopupConfig] = useState<{type: string; data?: any} | null>(null)
-
-  useEffect(() => {
-    window.showPopup = (type?: string, data?: any) => {
-      if (!type) {
-        setPopupConfig(null)
-      } else {
-        setPopupConfig({type, data})
-      }
-    }
-  }, [])
   return (
     <main className="flex min-h-screen w-full flex-col gap-4">
-      {popupConfig && <Popup type={popupConfig.type} data={popupConfig.data} />}
       <JsonLd data={localBusinessSchema} />
-      <Header />
       <Hero />
       <About />
       <ServicesTabs />
@@ -69,7 +55,6 @@ export default function Home() {
       <News />
       <Clients />
       <Subscription />
-      <Footer />
     </main>
   )
 }

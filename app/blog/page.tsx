@@ -1,6 +1,4 @@
 import {Metadata} from 'next'
-import Header from '../components/landing/Header'
-import Footer from '../components/landing/Footer'
 import JsonLd from '../components/JsonLd'
 import blogDataRaw from '../../blog.json'
 
@@ -43,8 +41,7 @@ export default function BlogPage() {
   return (
     <main className="min-h-screen bg-white">
       <JsonLd data={blogSchema} />
-      <Header />
-
+      
       {/* Hero Section */}
       <section className="px-5 pb-12 pt-[140px] text-[#26262B]">
         <div className="mx-auto max-w-[1240px]">
@@ -133,7 +130,6 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <Footer />
-    </main>
+          </main>
   )
 }

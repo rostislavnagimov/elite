@@ -1,13 +1,10 @@
 'use client'
 
-import Header from '../components/landing/Header'
-import Footer from '../components/landing/Footer'
 
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-white">
-      <Header />
-
+      
       {/* Hero Section */}
       <section className="px-5 pb-12 pt-[140px]">
         <div className="mx-auto max-w-[1200px]">
@@ -113,7 +110,6 @@ export default function ContactPage() {
         ></iframe>
       </section>
 
-      <Footer />
-    </main>
+          </main>
   )
 }

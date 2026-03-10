@@ -1,6 +1,4 @@
 import {Metadata} from 'next'
-import Header from '../components/landing/Header'
-import Footer from '../components/landing/Footer'
 import Link from 'next/link'
 import JsonLd from '../components/JsonLd'
 
@@ -130,8 +128,7 @@ export default function CareerCounselingPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      <Header />
-
+      
       {/* Hero Section */}
       <section className="relative overflow-hidden px-5 pb-20 pt-[140px]">
         <div className="relative z-10 mx-auto max-w-[1240px]">
@@ -358,7 +355,6 @@ export default function CareerCounselingPage() {
         <div className="absolute bottom-[-10%] right-[-10%] h-[500px] w-[500px] rounded-full bg-[#e61a66] opacity-10 blur-[150px]"></div>
       </section>
 
-      <Footer />
-    </main>
+          </main>
   )
 }
