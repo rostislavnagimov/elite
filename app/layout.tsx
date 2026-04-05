@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: 'Elite',
     images: [
       {
-        url: 'https://static.tildacdn.com/tild6663-3730-4262-b461-393335343435/Elite_logo_1_1.svg',
+        url: '/assets/images/Elite_logo_1_1.svg',
         width: 1200,
         height: 630,
         alt: 'Elite Logo'
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Кадровое агентство Elite | Подбор персонала и рекрутинговые услуги',
     description: 'Кадровое агентство, специализирующееся на подборе персонала и рекрутинговых услугах.',
-    images: ['https://static.tildacdn.com/tild6663-3730-4262-b461-393335343435/Elite_logo_1_1.svg']
+    images: ['/assets/images/Elite_logo_1_1.svg']
   },
   alternates: {
     canonical: 'https://elite.kz'
@@ -57,7 +57,7 @@ const organizationSchema = {
   '@type': 'Organization',
   name: 'Elite',
   url: 'https://elite.kz',
-  logo: 'https://static.tildacdn.com/tild6663-3730-4262-b461-393335343435/Elite_logo_1_1.svg',
+  logo: '/assets/images/Elite_logo_1_1.svg',
   contactPoint: {
     '@type': 'ContactPoint',
     telephone: '+7-727-272-22-22', // Example, should probably check if there's a real one

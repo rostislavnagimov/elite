@@ -25,7 +25,7 @@ export default function Reviews() {
   return (
     <section className="bg-elite-light-grey py-20">
       <div className="w-full overflow-hidden">
-        <div className="mx-auto mb-12 max-w-[1200px]">
+        <div className="mx-auto max-w-[1200px] px-5 lg:px-10 2xl:max-w-[1400px]">
           <h2 className="mb-3 text-[18px] font-[300] uppercase tracking-wider text-[#e61a66]">ОТЗЫВЫ</h2>
           <h3 className="text-[36px] font-[300] uppercase leading-[54px] lg:text-[45px]">
             <span className="gradient-text">ОТЗЫВЫ О НАС</span>

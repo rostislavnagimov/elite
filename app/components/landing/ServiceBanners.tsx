@@ -31,7 +31,7 @@ const services = [
 export default function ServiceBanners() {
   return (
     <section className="overflow-hidden py-20">
-      <div className="mx-auto max-w-[1200px] px-5 lg:px-10">
+      <div className="mx-auto max-w-[1200px] px-5 lg:px-10 2xl:max-w-[1400px]">
         <h2 className="mb-2 text-[18px] font-[300] uppercase tracking-wider text-[#e61a66]">Наши услуги</h2>
         <h3 className="mb-12 text-[36px] font-[300] uppercase leading-tight text-elite-black lg:text-[45px]">
           РЕШЕНИЯ В ОБЛАСТИ АУТСОРСИНГА И УПРАВЛЕНИЯ ПЕРСОНАЛОМ

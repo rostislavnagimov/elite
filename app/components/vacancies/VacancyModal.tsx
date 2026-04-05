@@ -42,15 +42,7 @@ export const VacancyModal: React.FC<VacancyModalProps> = ({ vacancy, onClose }) 
                     className="absolute right-4 top-4 z-10 flex h-8 w-8 items-center justify-center text-gray-500 transition-colors hover:text-gray-800 bg-white/50 rounded-full hover:bg-white"
                     aria-label="Close modal"
                 >
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M18 6L6 18M6 6L18 18"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        />
-                    </svg>
+                    <img src="/assets/icons/close.svg" alt="" className="h-6 w-6" />
                 </button>
 
                 <div className="flex-1 overflow-y-auto p-6 md:p-10 no-scrollbar">

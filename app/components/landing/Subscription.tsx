@@ -2,7 +2,7 @@
 export default function Subscription() {
   return (
     <section className="bg-white" style={{paddingTop: '60px', paddingBottom: '75px'}}>
-      <div className="mx-auto max-w-[1200px] px-5">
+      <div className="mx-auto max-w-[1200px] px-5 lg:px-10 2xl:max-w-[1400px]">
         <div className="flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-center">
           {/* Левая часть: заголовок + описание */}
           <div style={{maxWidth: '459px'}}>
@@ -86,7 +86,7 @@ export default function Subscription() {
                 {/* Дисклеймер с иконкой */}
                 <div className="mt-3 flex items-start gap-2 pl-2" style={{maxWidth: '221px', marginLeft: 'auto'}}>
                   <img
-                    src="https://static.tildacdn.com/tild6132-3135-4736-b265-393730343233/email_2_1.svg"
+                    src="/assets/external/email-icon.svg"
                     alt=""
                     width={19}
                     height={19}

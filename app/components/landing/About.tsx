@@ -7,22 +7,21 @@ export default function About() {
   return (
     <section className="mt-[72px] overflow-hidden bg-white pb-[30px] pt-0">
       <h2 className="gradient-text ml-[10%]">О КОМПАНИИ</h2>
-      <div className="relative mx-auto max-w-[1200px] px-5">
+      <div className="relative mx-auto max-w-[1200px] px-5 2xl:max-w-[1400px]">
         <div className="relative z-10 pt-[47px]">
-          <h2 className="gradient-text text-[45px] uppercase">КАДРОВЫЙ ХОЛДИНГ ELITE</h2>
+          <h2 className="gradient-text text-3xl uppercase sm:text-[45px]">КАДРОВЫЙ ХОЛДИНГ ELITE</h2>
 
-          <div className="max-w-[50%] text-[40px] uppercase tracking-tighter text-[#1e1e1e]">
+          <div className="max-w-full text-2xl uppercase tracking-tighter text-[#1e1e1e] sm:text-3xl lg:max-w-[50%] lg:text-[40px]">
             ОДНА ИЗ ПЕРВЫХ КАДРОВЫХ КОМПАНИЙ НА РЫНКЕ РЕСПУБЛИКИ КАЗАХСТАН
           </div>
 
           <div
-            className="text-[#1e1e1e]"
+            className="max-w-full text-[#1e1e1e] lg:max-w-[418px]"
             style={{
               fontFamily: "'Gilroy', Arial, sans-serif",
               fontSize: '15px',
               fontWeight: 400,
-              lineHeight: 1.55,
-              maxWidth: '418px'
+              lineHeight: 1.55
             }}
           >
             На сегодняшний день Elite предлагает широкий спектр услуг в области кадрового консалтинга. Мы имеем широкую
@@ -47,7 +46,7 @@ export default function About() {
             >
               {/* Arrow icon from original */}
               <Image
-                src="https://optim.tildacdn.com/tild6265-3161-4666-a162-326263356339/-/format/webp/1.png.webp"
+                src="/assets/external/arrow-down.webp"
                 alt=""
                 width={17}
                 height={15}
@@ -82,7 +81,7 @@ export default function About() {
           }}
         >
           <Image
-            src="https://optim.tildacdn.com/tild6163-6431-4137-a466-323639336162/-/format/webp/pexels-christina-mor.jpeg.webp"
+            src="/assets/external/about-mobile.webp"
             alt=""
             fill
             className="object-cover object-top"
@@ -100,7 +99,7 @@ export default function About() {
               {/* Rotating circle text */}
               <div className="absolute inset-0 animate-spin" style={{animationDuration: '15s'}}>
                 <Image
-                  src="https://optim.tildacdn.com/tild3830-3765-4731-b133-356134643237/-/resize/340x/-/format/webp/about2.png.webp"
+                  src="/assets/external/about-video-bg.webp"
                   alt=""
                   fill
                   className="object-contain"
@@ -110,7 +109,7 @@ export default function About() {
               {/* Play icon centered */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <Image
-                  src="https://static.tildacdn.com/tild6534-6336-4332-a431-613630383062/play.svg"
+                  src="/assets/external/play.svg"
                   alt=""
                   width={60}
                   height={60}
@@ -122,20 +121,11 @@ export default function About() {
           </div>
         </div>
 
-        {/* Mobile image */}
         <div
-          className="mx-auto mt-8 lg:hidden"
-          style={{
-            width: '100%',
-            maxWidth: '452px',
-            height: '239px',
-            borderRadius: '100px',
-            overflow: 'hidden',
-            position: 'relative'
-          }}
+          className="relative mx-auto mt-8 h-[200px] w-full max-w-[452px] overflow-hidden rounded-[100px] lg:hidden sm:h-[239px]"
         >
           <Image
-            src="https://optim.tildacdn.com/tild6163-6431-4137-a466-323639336162/-/format/webp/pexels-christina-mor.jpeg.webp"
+            src="/assets/external/about-mobile.webp"
             alt=""
             fill
             className="object-cover object-top"

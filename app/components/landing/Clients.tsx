@@ -8,7 +8,7 @@ export default function Clients() {
 
   return (
     <section className="bg-white py-20">
-      <div className="mx-auto max-w-[1200px] px-5 text-center lg:px-10">
+      <div className="mx-auto max-w-[1200px] px-5 text-center lg:px-10 2xl:max-w-[1400px]">
         <h2 className="mb-12 text-[36px] font-[300] uppercase leading-tight lg:text-[45px]">
           <span className="gradient-text">НАШИ ПАРТНЕРЫ</span>
         </h2>

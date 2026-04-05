@@ -20,7 +20,7 @@ export default function Advantages() {
 
   return (
     <section className="bg-elite-light-grey py-20">
-      <div className="mx-auto max-w-[1200px] px-5 lg:px-10">
+      <div className="mx-auto max-w-[1200px] px-5 lg:px-10 2xl:max-w-[1400px]">
         <div className="w-full">
           <h2 className="mb-4 text-[18px] font-[300] uppercase tracking-wider text-[#e61a66]">ЦЕННОСТИ КОМПАНИИ</h2>
           <h3 className="mb-12 text-[36px] font-[300] uppercase leading-tight text-elite-black lg:text-[45px]">

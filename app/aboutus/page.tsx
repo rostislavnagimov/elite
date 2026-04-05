@@ -46,7 +46,7 @@ export default function AboutUsPage() {
           {/* Video Placeholder / Big Image */}
           <div className="group relative aspect-[16/9] w-full cursor-pointer overflow-hidden rounded-[30px]">
             <img
-              src="https://optim.tildacdn.com/tild6366-3166-4139-b362-346133346539/-/format/webp/cherrydeck-05gac-Qn0.jpeg.webp"
+              src="/assets/external/aboutus-office.webp"
               alt="Elite Office"
               className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
@@ -54,7 +54,7 @@ export default function AboutUsPage() {
             <div className="transition-bg absolute inset-0 flex flex-col items-center justify-center bg-black/20 duration-300 group-hover:bg-black/30">
               <div className="mb-6 flex h-[80px] w-[80px] items-center justify-center rounded-full border border-white/30 bg-white/20 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 md:h-[100px] md:w-[100px]">
                 <img
-                  src="https://static.tildacdn.com/tild6534-6336-4332-a431-613630383062/play.svg"
+                  src="/assets/external/play.svg"
                   alt="Play"
                   className="ml-1 h-10 w-10 md:h-12 md:w-12"
                 />

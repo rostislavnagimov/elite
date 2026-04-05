@@ -99,9 +99,7 @@ export default function AboutPage() {
                 {benefits.map((benefit, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-[#e61a66]">
-                      <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
+                      <img src="/assets/icons/check.svg" alt="" className="h-4 w-4 text-white" />
                     </div>
                     <span className="font-[Gilroy,sans-serif] text-[16px] text-[#26262B]">{benefit}</span>
                   </li>
@@ -135,9 +133,7 @@ export default function AboutPage() {
                   <span className="font-[Gilroy,sans-serif] text-[14px] font-bold uppercase tracking-wider text-[#e61a66] transition-colors group-hover:text-white">
                     Подробнее
                   </span>
-                  <svg className="h-5 w-5 text-[#e61a66] transition-colors group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
+                  <img src="/assets/icons/arrow-right.svg" alt="" className="h-5 w-5 text-[#e61a66] transition-colors group-hover:text-white" />
                 </div>
               </Link>
             ))}

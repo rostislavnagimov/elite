@@ -7,7 +7,7 @@ export default function ContactPage() {
       
       {/* Hero Section */}
       <section className="px-5 pb-12 pt-[140px]">
-        <div className="mx-auto max-w-[1200px]">
+        <div className="mx-auto max-w-[1200px] 2xl:max-w-[1400px]">
           <div className="flex flex-col justify-between gap-8 border-b border-gray-100 pb-12 md:flex-row md:items-end">
             <div className="max-w-xl">
               <p className="mb-4 font-[Gilroy,sans-serif] text-[18px] text-[#26262b] opacity-60">
@@ -23,7 +23,7 @@ export default function ContactPage() {
 
       {/* Details Section */}
       <section className="px-5 py-12">
-        <div className="mx-auto max-w-[1200px]">
+        <div className="mx-auto max-w-[1200px] 2xl:max-w-[1400px]">
           <div className="grid grid-cols-1 gap-x-20 gap-y-12 md:grid-cols-2">
             {/* Left Column: Address and Hours */}
             <div className="space-y-12">

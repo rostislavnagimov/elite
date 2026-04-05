@@ -36,9 +36,7 @@ export default function SendResumePage() {
           <div className="text-center">
             <div className="mb-6 flex justify-center">
               <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#e61a66]/10">
-                <svg className="h-10 w-10 text-[#e61a66]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
+                <img src="/assets/icons/check.svg" alt="" className="h-10 w-10 text-[#e61a66]" />
               </div>
             </div>
             <h1 className="mb-4 font-[Gilroy,sans-serif] text-[32px] font-bold text-[#26262B]">

@@ -79,9 +79,7 @@ export default function RecruitmentPage() {
               ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ
             </span>
             <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#26262B] transition-all group-hover:border-[#e61a66] group-hover:bg-[#e61a66]">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="transition-colors group-hover:text-white">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <img src="/assets/icons/arrow-right.svg" alt="" className="h-5 w-5 transition-colors group-hover:text-white" />
             </div>
           </button>
         </div>
@@ -97,9 +95,7 @@ export default function RecruitmentPage() {
             {benefits.map((benefit, i) => (
               <div key={i} className="flex gap-4 rounded-[20px] bg-white p-6 transition-shadow hover:shadow-lg">
                 <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[#e61a66]">
-                  <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <img src="/assets/icons/check.svg" alt="" className="h-4 w-4 text-white" />
                 </div>
                 <p className="font-[Gilroy,sans-serif] text-[16px] leading-relaxed text-[#26262B]">
                   {benefit}

@@ -59,7 +59,7 @@ export default function ServicesTabs() {
   return (
     <section className="w-full bg-white py-20">
       <div className="">
-        <div className="mx-auto mb-12 max-w-[1200px]">
+        <div className="mx-auto mb-12 max-w-[1200px] px-5 2xl:max-w-[1400px]">
           <h2 className="mb-4 text-[18px] font-[300] uppercase tracking-wider text-[#e61a66]">НАШИ УСЛУГИ</h2>
           <h3 className="text-[36px] font-[300] uppercase leading-tight text-elite-black lg:text-[45px]">
             РЕШЕНИЯ В ОБЛАСТИ АУТСОРСИНГА И УПРАВЛЕНИЯ ПЕРСОНАЛОМ
@@ -82,8 +82,8 @@ export default function ServicesTabs() {
           ))}
         </div>
 
-        <div className="animate-in fade-in slide-in-from-bottom-4 flex h-[70vh] flex-col items-center gap-2 duration-500 lg:flex-row">
-          <div className="w-full lg:ml-[160px] lg:w-1/3">
+        <div className="animate-in fade-in slide-in-from-bottom-4 flex min-h-[500px] flex-col items-center gap-8 duration-500 lg:h-[70vh] lg:flex-row lg:gap-2">
+          <div className="w-full px-5 lg:ml-[160px] lg:w-1/3">
             <h3 className="mb-6 text-2xl font-[300] uppercase leading-tight text-elite-black lg:text-3xl">
               {activeTab.heading}
             </h3>

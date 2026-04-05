@@ -22,15 +22,7 @@ const CallbackPopup = ({onClose}: {onClose: () => void}) => {
         className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center text-gray-400 transition-colors hover:text-gray-600"
         aria-label="Close"
       >
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M15 5L5 15M5 5L15 15"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <img src="/assets/icons/close.svg" alt="" className="h-5 w-5" />
       </button>
 
       <div className="mb-8 text-center">
@@ -94,15 +86,7 @@ const VideoPopup = ({onClose, videoId}: {onClose: () => void; videoId?: string})
         className="absolute -top-10 right-0 z-10 flex h-8 w-8 items-center justify-center text-white transition-colors hover:text-gray-300 md:-right-10 md:top-0"
         aria-label="Close"
       >
-        <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M15 5L5 15M5 5L15 15"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <img src="/assets/icons/close.svg" alt="" className="h-6 w-6" />
       </button>
     </div>
   )

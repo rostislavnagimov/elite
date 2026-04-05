@@ -40,7 +40,7 @@ export default function Vacancies() {
   return (
     <section className="bg-white">
       {/* ── Верхняя белая часть: заголовок + описание + категории ── */}
-      <div className="mx-auto max-w-[1200px] px-5 pt-[25px]">
+      <div className="mx-auto max-w-[1200px] px-5 pt-[25px] 2xl:max-w-[1400px]">
         {/* Заголовок — не трогаем */}
         <h2 className="mb-4 text-[36px] font-[300] uppercase leading-[54px] lg:text-[45px]">
           <span className="gradient-text">ВАКАНСИИ</span>
@@ -111,7 +111,7 @@ export default function Vacancies() {
         style={{
           height: '413px',
           backgroundImage:
-            "url('https://optim.tildacdn.com/tild6366-3930-4735-b134-386136633364/-/format/webp/pexels-fox-1595391.jpeg.webp')",
+            "url('/assets/external/vacancies-bg.webp')",
           backgroundAttachment: 'fixed',
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
@@ -153,7 +153,7 @@ export default function Vacancies() {
       `}</style>
 
       {/* ── Последние вакансии ── */}
-      <div className="mx-auto max-w-[1200px] px-5 pb-20 pt-16">
+      <div className="mx-auto max-w-[1200px] px-5 pb-20 pt-16 2xl:max-w-[1400px]">
         <h2 className="mb-10 text-[32px] font-[300] uppercase">
           <span className="gradient-text">ПОСЛЕДНИЕ ВАКАНСИИ</span>
         </h2>

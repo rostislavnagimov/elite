@@ -1,38 +1,7 @@
-import {Metadata} from 'next'
+'use client'
+
 import Link from 'next/link'
 import JsonLd from '../components/JsonLd'
-
-// Inline SVG icons to avoid external dependencies
-const UserCheckIcon = ({className}: {className?: string}) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-    <circle cx="9" cy="7" r="4"/>
-    <polyline points="16 11 18 13 22 9"/>
-  </svg>
-)
-
-const SettingsIcon = ({className}: {className?: string}) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.72v-.51a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
-    <circle cx="12" cy="12" r="3"/>
-  </svg>
-)
-
-const TrendingUpIcon = ({className}: {className?: string}) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
-    <polyline points="16 7 22 7 22 13"/>
-  </svg>
-)
-
-export const metadata: Metadata = {
-  title: 'Карьерное консультирование | Кадровый Холдинг Elite',
-  description:
-    'Кадровый Холдинг Elite приглашает вас пройти карьерное консультирование. Мы поможем вам начать головокружительную карьеру прямо сейчас.',
-  alternates: {
-    canonical: 'https://elite.kz/careercounseling'
-  }
-}
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -62,15 +31,15 @@ export default function CareerCounselingPage() {
   const values = [
     {
       title: 'Индивидуальный подход',
-      Icon: UserCheckIcon
+      icon: '/assets/icons/user-check.svg'
     },
     {
       title: 'Эффективная система',
-      Icon: SettingsIcon
+      icon: '/assets/icons/settings.svg'
     },
     {
       title: 'Полная информация о рынке труда',
-      Icon: TrendingUpIcon
+      icon: '/assets/icons/trending-up.svg'
     }
   ]
 
@@ -172,22 +141,7 @@ export default function CareerCounselingPage() {
                 ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ
               </span>
               <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#26262B] transition-all group-hover:border-[#e61a66] group-hover:bg-[#e61a66]">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="transition-colors group-hover:text-white"
-                >
-                  <path
-                    d="M5 12H19M19 12L12 5M19 12L12 19"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <img src="/assets/icons/arrow-right.svg" alt="" className="h-5 w-5 transition-colors group-hover:text-white" />
               </div>
             </Link>
           </div>
@@ -196,7 +150,7 @@ export default function CareerCounselingPage() {
         <div className="mx-auto mt-16 max-w-[1400px] px-5">
           <div className="relative aspect-[21/9] overflow-hidden rounded-[30px] bg-gradient-to-r from-[#e61a66]/20 to-[#e61a66]/5">
             <img
-              src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1400&h=600&fit=crop"
+              src="/assets/external/career-counseling-hero.jpg"
               alt="Career Counseling"
               className="h-full w-full object-cover"
             />
@@ -229,7 +183,7 @@ export default function CareerCounselingPage() {
             {values.map((v, i) => (
               <div key={i} className="flex flex-col items-center text-center">
                 <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#e61a66]/10 text-[#e61a66]">
-                  <v.Icon className="h-8 w-8" />
+                  <img src={v.icon} alt="" className="h-8 w-8" />
                 </div>
                 <h3 className="font-[Gilroy,sans-serif] text-[16px] font-bold uppercase tracking-wide text-[#26262B]">
                   {v.title}
@@ -292,7 +246,7 @@ export default function CareerCounselingPage() {
             <div className="w-full md:w-1/2">
               <div className="aspect-[4/5] overflow-hidden rounded-[30px] bg-[#F5F5F5]">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=750&fit=crop"
+                  src="/assets/external/expert-olesya.jpg"
                   alt="Ereshchenko Olesya"
                   className="h-full w-full object-cover"
                 />

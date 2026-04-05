@@ -6,21 +6,21 @@ const posts = [
     title: 'Тренды рекрутинга 2026: как меняется рынок найма и к чему готовиться компаниям',
     description:
       'Мы собрали наш профессиональный взгляд на ключевые изменения на рынке найма в 2026 году — на основе практики, аналитики и работы с компаниями в условиях кадрового дефицита.',
-    image: 'https://static.tildacdn.com/tild6333-3362-4566-b733-663737653132/team_29.png',
+    image: '/assets/external/news-1.png',
     link: 'https://elite.kz/tpost/ek6otu2tp1-trendi-rekrutinga-2026-kak-menyaetsya-ri'
   },
   {
     title: 'Академия Elite: развиваем навыки, которые важны для работы и жизни',
     description:
       'В нашей компании развитие сотрудников — не формальность, а часть корпоративной культуры. Мы искренне верим, что сильная команда строится там, где людям дают возможности расти, учиться новому и чувствовать себя уверенно в любой ситуации.',
-    image: 'https://static.tildacdn.com/tild3038-6131-4461-b834-633630383965/_WhatsApp_2025-11-17.jpg',
+    image: '/assets/external/news-2.jpg',
     link: 'https://elite.kz/tpost/8zasfi1571-akademiya-elite-razvivaem-naviki-kotorie'
   },
   {
     title: 'С Днём бухгалтера и аудитора, коллеги!',
     description:
       'Сегодня, 10 ноября, мы поздравляем тех, кто умеет превращать цифры в порядок, хаос — в баланс, а отчёты — в искусство!',
-    image: 'https://static.tildacdn.com/tild6335-3630-4136-b234-383533663165/111111111.jpg',
+    image: '/assets/external/news-3.jpg',
     link: 'https://elite.kz/tpost/rfcig50951-s-dnyom-buhgaltera-i-auditora-kollegi'
   }
 ]
@@ -28,7 +28,7 @@ const posts = [
 export default function News() {
   return (
     <section className="bg-white py-20">
-      <div className="mx-auto max-w-[1200px] px-5 lg:px-10">
+      <div className="mx-auto max-w-[1200px] px-5 lg:px-10 2xl:max-w-[1400px]">
         <div className="mb-12">
           <h2 className="mb-4 text-[18px] font-[300] uppercase tracking-wider text-[#e61a66]">НОВОСТИ</h2>
           <h3 className="text-[36px] font-[300] uppercase leading-tight text-elite-black lg:text-[45px]">

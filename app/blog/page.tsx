@@ -1,4 +1,5 @@
 import {Metadata} from 'next'
+import Link from 'next/link'
 import JsonLd from '../components/JsonLd'
 import blogDataRaw from '../../blog.json'
 
@@ -21,7 +22,7 @@ const blogSchema = {
     name: 'Elite',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://static.tildacdn.com/tild6564-3730-4663-a262-303235323832/Elite_logo_white2.png'
+      url: '/assets/images/Elite_logo_1_1.svg'
     }
   }
 }
@@ -98,22 +99,7 @@ export default function BlogPage() {
 
                     <div className="mt-auto flex items-center gap-1 font-[Gilroy,sans-serif] text-[16px] font-medium text-[#26262b] transition-colors group-hover:text-[#e61a66]">
                       Читать дальше
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="mt-0.5 transition-transform duration-300 group-hover:translate-x-1"
-                      >
-                        <path
-                          d="M1 7H13M13 7L9 3M13 7L9 11"
-                          stroke="currentColor"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
+                      <img src="/assets/icons/arrow-right.svg" alt="" className="mt-0.5 h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                     </div>
                   </div>
                 </a>

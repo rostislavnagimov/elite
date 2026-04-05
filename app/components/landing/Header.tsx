@@ -3,12 +3,15 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useState } from 'react'
 
 export default function Header() {
   const pathname = usePathname()
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  
   return (
     <header className="z-100 fixed top-0 w-full max-w-[100vw] bg-white shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
-      <div className="mx-auto flex h-[80px] max-w-[1200px] items-center justify-between gap-4 px-5">
+      <div className="mx-auto flex h-[80px] max-w-[1200px] items-center justify-between gap-4 px-5 2xl:max-w-[1400px]">
         <div className="flex-shrink-0">
           <Link href="/">
             <Image
@@ -29,22 +32,7 @@ export default function Header() {
                 className="flex items-center gap-1 whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium text-[#26262b] transition-colors group-hover:text-[#e61a66]"
               >
                 Партнерам
-                <svg
-                  width="10"
-                  height="6"
-                  viewBox="0 0 10 6"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="flex-shrink-0"
-                >
-                  <path
-                    d="M1 1L5 5L9 1"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <img src="/assets/icons/chevron-down.svg" alt="" className="flex-shrink-0 h-[6px] w-[10px]" />
               </Link>
               <div className="absolute left-0 top-full hidden pt-2 group-hover:block">
                 <div className="flex w-[250px] flex-col rounded-md bg-white p-2 shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
@@ -93,22 +81,7 @@ export default function Header() {
                 className="flex items-center gap-1 whitespace-nowrap font-[Gilroy,sans-serif] text-[15px] font-medium text-[#26262b] transition-colors group-hover:text-[#e61a66]"
               >
                 Соискателям
-                <svg
-                  width="10"
-                  height="6"
-                  viewBox="0 0 10 6"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="flex-shrink-0"
-                >
-                  <path
-                    d="M1 1L5 5L9 1"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <img src="/assets/icons/chevron-down.svg" alt="" className="flex-shrink-0 h-[6px] w-[10px]" />
               </Link>
               <div className="absolute left-0 top-full hidden pt-2 group-hover:block">
                 <div className="flex w-[250px] flex-col rounded-md bg-white p-2 shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
@@ -214,7 +187,7 @@ export default function Header() {
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
-                  d="M50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100ZM25 39.3918C25 31.4558 31.4566 25 39.3918 25H60.6082C68.5442 25 75 31.4566 75 39.3918V60.8028C75 68.738 68.5442 75.1946 60.6082 75.1946H39.3918C31.4558 75.1946 25 68.738 25 60.8028V39.3918ZM36.9883 50.0054C36.9883 42.8847 42.8438 37.0922 50.0397 37.0922C57.2356 37.0922 63.0911 42.8847 63.0911 50.0054C63.0911 57.1252 57.2356 62.9177 50.0397 62.9177C42.843 62.9177 36.9883 57.1252 36.9883 50.0054ZM41.7422 50.0054C41.7422 54.5033 45.4641 58.1638 50.0397 58.1638C54.6153 58.1638 58.3372 54.5041 58.3372 50.0054C58.3372 45.5066 54.6145 41.8469 50.0397 41.8469C45.4641 41.8469 41.7422 45.5066 41.7422 50.0054ZM63.3248 39.6355C65.0208 39.6355 66.3956 38.2606 66.3956 36.5646C66.3956 34.8687 65.0208 33.4938 63.3248 33.4938C61.6288 33.4938 60.2539 34.8687 60.2539 36.5646C60.2539 38.2606 61.6288 39.6355 63.3248 39.6355Z"
+                  d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm17.9-67.374c3.838.346 6 2.695 6.474 6.438.332 2.612.626 6.352.626 10.375 0 7.064-.626 11.148-.626 11.148-.588 3.728-2.39 5.752-6.18 6.18-4.235.48-13.76.7-17.992.7-4.38 0-13.237-.184-17.66-.552-3.8-.317-6.394-2.44-6.916-6.218-.38-2.752-.626-6.022-.626-11.222 0-5.788.209-8.238.7-10.853.699-3.732 2.48-5.54 6.548-5.96C36.516 32.221 40.55 32 49.577 32c4.413 0 13.927.228 18.322.626Zm-23.216 9.761v14.374L58.37 49.5l-13.686-7.114Z"
                   fill="#e61a66"
                 />
               </svg>
@@ -290,7 +263,11 @@ export default function Header() {
         </div>
 
         {/* Mobile burger */}
-        <button className="flex-shrink-0 text-[#e61a66] lg:hidden" aria-label="Открыть меню">
+        <button 
+          className="flex-shrink-0 text-[#e61a66] lg:hidden" 
+          aria-label="Открыть меню"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
           <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="28" height="3" fill="currentColor" />
             <rect y="8" width="28" height="3" fill="currentColor" />
@@ -298,6 +275,42 @@ export default function Header() {
           </svg>
         </button>
       </div>
+      
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="absolute left-0 right-0 top-[80px] z-50 bg-white shadow-lg lg:hidden">
+          <nav className="flex flex-col p-4">
+            <div className="mb-4 border-b pb-4">
+              <p className="mb-2 font-[Gilroy,sans-serif] text-[14px] font-medium text-[#26262b] opacity-50">Партнерам</p>
+              <Link href="/aboutus" className="block py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b]" onClick={() => setMobileMenuOpen(false)}>О компании</Link>
+              <Link href="/outstaffing" className="block py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b]" onClick={() => setMobileMenuOpen(false)}>Аутстаффинг</Link>
+              <Link href="/outsourcing" className="block py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b]" onClick={() => setMobileMenuOpen(false)}>Аутсорсинг персонала</Link>
+              <Link href="/podbor-personala" className="block py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b]" onClick={() => setMobileMenuOpen(false)}>Подбор персонала</Link>
+              <Link href="/obzor-rynka-truda-i-zarabotanyh-plat" className="block py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b]" onClick={() => setMobileMenuOpen(false)}>Обзоры рынка</Link>
+              <Link href="/reviews" className="block py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b]" onClick={() => setMobileMenuOpen(false)}>Отзывы</Link>
+            </div>
+            <div className="mb-4 border-b pb-4">
+              <p className="mb-2 font-[Gilroy,sans-serif] text-[14px] font-medium text-[#26262b] opacity-50">Соискателям</p>
+              <Link href="/about" className="block py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b]" onClick={() => setMobileMenuOpen(false)}>О компании</Link>
+              <Link href="/vacancy" className="block py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b]" onClick={() => setMobileMenuOpen(false)}>Все вакансии</Link>
+              <Link href="/sendresume" className="block py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b]" onClick={() => setMobileMenuOpen(false)}>Отправить резюме</Link>
+              <Link href="/careercounseling" className="block py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b]" onClick={() => setMobileMenuOpen(false)}>Карьерное консультирование</Link>
+              <Link href="/career" className="block py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b]" onClick={() => setMobileMenuOpen(false)}>Карьера в Elite</Link>
+            </div>
+            <Link href="/blog" className="block py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b]" onClick={() => setMobileMenuOpen(false)}>Блог</Link>
+            <Link href="/contact" className="block py-2 font-[Gilroy,sans-serif] text-[15px] text-[#26262b]" onClick={() => setMobileMenuOpen(false)}>Контакты</Link>
+            <div className="mt-4 flex flex-col gap-3 border-t pt-4">
+              <a href="tel:+77013555355" className="font-[Gilroy,sans-serif] text-[16px] font-medium text-[#e61a66]">+7 701 355 53 55</a>
+              <button 
+                className="rounded-[5px] bg-[#e61a66] px-5 py-3 font-[Gilroy,sans-serif] text-[14px] font-medium text-white"
+                onClick={() => { window.showPopup('callback'); setMobileMenuOpen(false); }}
+              >
+                Заказать звонок
+              </button>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   )
 }

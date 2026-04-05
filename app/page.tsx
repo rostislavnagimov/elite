@@ -18,7 +18,7 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Кадровое агентство Elite',
-  image: 'https://static.tildacdn.com/tild6564-3730-4663-a262-303235323832/Elite_logo_white2.png',
+  image: '/assets/images/Elite_logo_1_1.svg',
   '@id': 'https://elite.kz',
   url: 'https://elite.kz',
   telephone: '+7-727-272-22-22',
