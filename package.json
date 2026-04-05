@@ -11,7 +11,11 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md,yml,html}\" --ignore-path .gitignore"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.58.0",
+    "@typescript-eslint/parser": "^8.58.0",
     "eslint-plugin-import-helpers": "^2.0.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
     "next": "16.1.6",
     "prettier": "^3.8.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
