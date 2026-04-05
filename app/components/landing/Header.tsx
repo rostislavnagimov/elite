@@ -113,8 +113,8 @@ export default function Header() {
               <div className="absolute left-0 top-full hidden pt-2 group-hover:block">
                 <div className="flex w-[250px] flex-col rounded-md bg-white p-2 shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
                   <Link
-                    href="/aboutus"
-                    className={`rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] transition-colors hover:bg-gray-50 hover:text-[#e61a66] ${pathname === '/aboutus' ? 'bg-gray-50 text-[#e61a66]' : 'text-[#26262b]'}`}
+                    href="/about"
+                    className={`rounded-md px-3 py-2 font-[Gilroy,sans-serif] text-[15px] transition-colors hover:bg-gray-50 hover:text-[#e61a66] ${pathname === '/about' ? 'bg-gray-50 text-[#e61a66]' : 'text-[#26262b]'}`}
                   >
                     О компании
                   </Link>

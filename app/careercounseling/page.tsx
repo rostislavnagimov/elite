@@ -2,6 +2,29 @@ import {Metadata} from 'next'
 import Link from 'next/link'
 import JsonLd from '../components/JsonLd'
 
+// Inline SVG icons to avoid external dependencies
+const UserCheckIcon = ({className}: {className?: string}) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+    <circle cx="9" cy="7" r="4"/>
+    <polyline points="16 11 18 13 22 9"/>
+  </svg>
+)
+
+const SettingsIcon = ({className}: {className?: string}) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.72v-.51a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+    <circle cx="12" cy="12" r="3"/>
+  </svg>
+)
+
+const TrendingUpIcon = ({className}: {className?: string}) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+    <polyline points="16 7 22 7 22 13"/>
+  </svg>
+)
+
 export const metadata: Metadata = {
   title: 'Карьерное консультирование | Кадровый Холдинг Elite',
   description:
@@ -39,15 +62,15 @@ export default function CareerCounselingPage() {
   const values = [
     {
       title: 'Индивидуальный подход',
-      icon: 'https://static.tildacdn.com/tild3537-6435-4330-b466-643132643564/icons8-manager-96_1.png'
+      Icon: UserCheckIcon
     },
     {
       title: 'Эффективная система',
-      icon: 'https://static.tildacdn.com/tild6130-3166-4131-b461-613463323030/icons8-system-96_1.png'
+      Icon: SettingsIcon
     },
     {
       title: 'Полная информация о рынке труда',
-      icon: 'https://static.tildacdn.com/tild3262-6232-4731-b765-383733363363/icons8-market-96_1.png'
+      Icon: TrendingUpIcon
     }
   ]
 
@@ -171,9 +194,9 @@ export default function CareerCounselingPage() {
         </div>
         {/* Hero Image */}
         <div className="mx-auto mt-16 max-w-[1400px] px-5">
-          <div className="relative aspect-[21/9] overflow-hidden rounded-[30px]">
+          <div className="relative aspect-[21/9] overflow-hidden rounded-[30px] bg-gradient-to-r from-[#e61a66]/20 to-[#e61a66]/5">
             <img
-              src="https://optim.tildacdn.com/tild6333-3331-4131-b333-653736346430/-/format/webp/photo.jpg"
+              src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1400&h=600&fit=crop"
               alt="Career Counseling"
               className="h-full w-full object-cover"
             />
@@ -205,11 +228,9 @@ export default function CareerCounselingPage() {
           <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
             {values.map((v, i) => (
               <div key={i} className="flex flex-col items-center text-center">
-                <img
-                  src={v.icon}
-                  alt={v.title}
-                  className="mb-6 h-16 w-16 opacity-80 grayscale transition-all group-hover:opacity-100 group-hover:grayscale-0"
-                />
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#e61a66]/10 text-[#e61a66]">
+                  <v.Icon className="h-8 w-8" />
+                </div>
                 <h3 className="font-[Gilroy,sans-serif] text-[16px] font-bold uppercase tracking-wide text-[#26262B]">
                   {v.title}
                 </h3>
@@ -252,7 +273,10 @@ export default function CareerCounselingPage() {
                   ))}
                 </div>
 
-                <button className="mt-auto w-full rounded-xl bg-[#e61a66] py-4 font-[Gilroy,sans-serif] text-[14px] font-bold uppercase tracking-widest text-white transition-colors hover:bg-[#c91659]">
+                <button 
+                  onClick={() => document.getElementById('order')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="mt-auto w-full rounded-xl bg-[#e61a66] py-4 font-[Gilroy,sans-serif] text-[14px] font-bold uppercase tracking-widest text-white transition-colors hover:bg-[#c91659]"
+                >
                   Узнать подробнее
                 </button>
               </div>
@@ -268,7 +292,7 @@ export default function CareerCounselingPage() {
             <div className="w-full md:w-1/2">
               <div className="aspect-[4/5] overflow-hidden rounded-[30px] bg-[#F5F5F5]">
                 <img
-                  src="https://optim.tildacdn.com/tild3161-3932-4432-b733-366562303038/-/format/webp/DSCN3439.jpg"
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=750&fit=crop"
                   alt="Ereshchenko Olesya"
                   className="h-full w-full object-cover"
                 />

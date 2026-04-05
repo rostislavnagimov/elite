@@ -1,9 +1,9 @@
 export default function Clients() {
   const partners = [
-    './assets/images/clients/1.jpeg',
-    './assets/images/clients/2.png',
-    './assets/images/clients/3.jpeg',
-    './assets/images/clients/4.jpg'
+    { name: 'WILO CENTER ASIA', industry: 'Инженерное оборудование' },
+    { name: 'Торговый-промышленный Банк Китая', industry: 'Банковский сектор' },
+    { name: 'НК АСТАНА ЭКСПО-2017', industry: 'Выставочная деятельность' },
+    { name: 'РЭЦЦА', industry: 'Экологические проекты' }
   ]
 
   return (
@@ -13,13 +13,19 @@ export default function Clients() {
           <span className="gradient-text">НАШИ ПАРТНЕРЫ</span>
         </h2>
 
-        <div className="grid grid-cols-4 items-center gap-6">
-          {partners.map((partner) => (
-            <img
-              key={partner}
-              src={partner}
-              className="flex h-24 items-center justify-center rounded-lg border border-gray-100 p-4 text-sm font-medium text-elite-grey"
-            />
+        <div className="grid grid-cols-2 items-center gap-6 md:grid-cols-4">
+          {partners.map((partner, index) => (
+            <div
+              key={index}
+              className="flex h-32 flex-col items-center justify-center rounded-lg border border-gray-100 bg-[#F5F5F5] p-4 text-center transition-all hover:border-[#e61a66]/30 hover:shadow-md"
+            >
+              <p className="font-[Gilroy,sans-serif] text-[16px] font-bold uppercase text-[#26262B]">
+                {partner.name}
+              </p>
+              <p className="mt-1 font-[Gilroy,sans-serif] text-[12px] uppercase tracking-wider text-[#26262B] opacity-50">
+                {partner.industry}
+              </p>
+            </div>
           ))}
         </div>
       </div>

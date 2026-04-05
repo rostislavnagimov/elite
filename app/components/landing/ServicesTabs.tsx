@@ -2,6 +2,7 @@
 
 import {useState} from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const tabs = [
   {
@@ -17,7 +18,8 @@ const tabs = [
       'Официальное оформление персонала',
       'Возможность вести бизнес в Казахстане без открытия офиса или представительства'
     ],
-    image: '/assets/images/1.jpeg'
+    image: '/assets/images/1.jpeg',
+    link: '/outstaffing'
   },
   {
     id: 'outsourcing',
@@ -26,7 +28,8 @@ const tabs = [
     description:
       'Позволяет не только перераспределить вспомогательные бизнес-процессы, но и снизить юридические и финансовые риски найма персонала на короткий срок. Трудовые отношения с работниками будут оформлены нашей компанией, правоотношения «клиент-работник» отсутствуют.',
     list: ['Повышение своей конкурентоспособности.'],
-    image: '/assets/images/2.jpeg'
+    image: '/assets/images/2.jpeg',
+    link: '/outsourcing'
   },
   {
     id: 'recruitment',
@@ -35,7 +38,8 @@ const tabs = [
     description:
       'Кадровое агентство Elite - профессиональный подбор высшего руководства, редких специалистов и менеджеров среднего звена.',
     list: ['Оперативное и качественное закрытие вакансии.'],
-    image: '/assets/images/3.jpeg'
+    image: '/assets/images/3.jpeg',
+    link: '/podbor-personala'
   },
   {
     id: 'market-reviews',
@@ -44,7 +48,8 @@ const tabs = [
     description:
       'Это актуальная информация о реальных заработных платах, наличии и уровнях квалификации специалистов, это целевые аналитические исследования по запросу компании.',
     list: ['Понимание конкурентоспособности уровня оплаты для новой позиции.'],
-    image: '/assets/images/4.jpeg'
+    image: '/assets/images/4.jpeg',
+    link: '/obzor-rynka-truda-i-zarabotanyh-plat'
   }
 ]
 
@@ -91,9 +96,12 @@ export default function ServicesTabs() {
                 </li>
               ))}
             </ul>
-            <button className="mt-10 rounded-full bg-[#e61a66] px-10 py-4 text-sm font-[300] uppercase tracking-wider text-white shadow-md transition-colors hover:bg-[#c91659]">
+            <Link 
+              href={activeTab.link}
+              className="mt-10 inline-block rounded-full bg-[#e61a66] px-10 py-4 text-sm font-[300] uppercase tracking-wider text-white shadow-md transition-colors hover:bg-[#c91659]"
+            >
               Подробнее
-            </button>
+            </Link>
           </div>
           <div className="relative hidden h-full overflow-visible lg:block lg:w-2/3">
             <Image
