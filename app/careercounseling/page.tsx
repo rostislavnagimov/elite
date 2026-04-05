@@ -120,7 +120,6 @@ export default function CareerCounselingPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      
       {/* Hero Section */}
       <section className="relative overflow-hidden px-5 pb-20 pt-[140px]">
         <div className="relative z-10 mx-auto max-w-[1240px]">
@@ -141,7 +140,11 @@ export default function CareerCounselingPage() {
                 ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ
               </span>
               <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#26262B] transition-all group-hover:border-[#e61a66] group-hover:bg-[#e61a66]">
-                <img src="/assets/icons/arrow-right.svg" alt="" className="h-5 w-5 transition-colors group-hover:text-white" />
+                <img
+                  src="/assets/icons/arrow-right.svg"
+                  alt=""
+                  className="h-5 w-5 transition-colors group-hover:text-white"
+                />
               </div>
             </Link>
           </div>
@@ -227,8 +230,8 @@ export default function CareerCounselingPage() {
                   ))}
                 </div>
 
-                <button 
-                  onClick={() => document.getElementById('order')?.scrollIntoView({ behavior: 'smooth' })}
+                <button
+                  onClick={() => document.getElementById('order')?.scrollIntoView({behavior: 'smooth'})}
                   className="mt-auto w-full rounded-xl bg-[#e61a66] py-4 font-[Gilroy,sans-serif] text-[14px] font-bold uppercase tracking-widest text-white transition-colors hover:bg-[#c91659]"
                 >
                   Узнать подробнее
@@ -332,7 +335,6 @@ export default function CareerCounselingPage() {
         {/* Decorative element */}
         <div className="absolute bottom-[-10%] right-[-10%] h-[500px] w-[500px] rounded-full bg-[#e61a66] opacity-10 blur-[150px]"></div>
       </section>
-
-          </main>
+    </main>
   )
 }

@@ -1,5 +1,5 @@
 import {Metadata} from 'next'
-import { VacancyList } from '../components/vacancies/VacancyList'
+import {VacancyList} from '../components/vacancies/VacancyList'
 import vacanciesData from '../../vacancies.json'
 import JsonLd from '../components/JsonLd'
 

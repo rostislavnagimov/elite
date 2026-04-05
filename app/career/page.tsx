@@ -34,7 +34,8 @@ const careerSchema = {
 const benefits = [
   {
     title: 'Постоянное развитие',
-    description: 'Мы верим, что постоянное развитие – ключ к успеху, поэтому сотрудники Elite проходят регулярное обучение и повышение квалификации.'
+    description:
+      'Мы верим, что постоянное развитие – ключ к успеху, поэтому сотрудники Elite проходят регулярное обучение и повышение квалификации.'
   },
   {
     title: 'Ваш голос важен',
@@ -234,14 +235,19 @@ export default function CareerPage() {
             КАРЬЕРА В ELITE
           </h1>
           <p className="mb-10 max-w-[600px] font-[Gilroy,sans-serif] text-[18px] text-[#26262B] md:text-[20px]">
-            Присоединяйтесь к одной из ведущих кадровых компаний Казахстана. Мы предлагаем стабильность и возможность профессионального роста.
+            Присоединяйтесь к одной из ведущих кадровых компаний Казахстана. Мы предлагаем стабильность и возможность
+            профессионального роста.
           </p>
           <Link href="#vacancies" className="group inline-flex items-center gap-4">
             <span className="border-b border-transparent font-[Gilroy,sans-serif] text-[14px] font-bold uppercase tracking-widest text-[#26262B] transition-all group-hover:border-[#e61a66]">
               СМОТРЕТЬ ВАКАНСИИ
             </span>
             <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#26262B] transition-all group-hover:border-[#e61a66] group-hover:bg-[#e61a66]">
-              <img src="/assets/icons/arrow-right.svg" alt="" className="h-5 w-5 transition-colors group-hover:text-white" />
+              <img
+                src="/assets/icons/arrow-right.svg"
+                alt=""
+                className="h-5 w-5 transition-colors group-hover:text-white"
+              />
             </div>
           </Link>
         </div>
@@ -304,7 +310,9 @@ export default function CareerPage() {
                       {vacancy.responsibilities.map((item, idx) => (
                         <li key={idx} className="flex gap-2">
                           <span className="text-[#e61a66]">•</span>
-                          <span className="font-[Gilroy,sans-serif] text-[14px] leading-relaxed text-[#26262B]">{item}</span>
+                          <span className="font-[Gilroy,sans-serif] text-[14px] leading-relaxed text-[#26262B]">
+                            {item}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -318,7 +326,9 @@ export default function CareerPage() {
                       {vacancy.requirements.map((item, idx) => (
                         <li key={idx} className="flex gap-2">
                           <span className="text-[#e61a66]">•</span>
-                          <span className="font-[Gilroy,sans-serif] text-[14px] leading-relaxed text-[#26262B]">{item}</span>
+                          <span className="font-[Gilroy,sans-serif] text-[14px] leading-relaxed text-[#26262B]">
+                            {item}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -332,7 +342,9 @@ export default function CareerPage() {
                       {vacancy.offers.map((item, idx) => (
                         <li key={idx} className="flex gap-2">
                           <span className="text-[#e61a66]">•</span>
-                          <span className="font-[Gilroy,sans-serif] text-[14px] leading-relaxed text-[#26262B]">{item}</span>
+                          <span className="font-[Gilroy,sans-serif] text-[14px] leading-relaxed text-[#26262B]">
+                            {item}
+                          </span>
                         </li>
                       ))}
                     </ul>

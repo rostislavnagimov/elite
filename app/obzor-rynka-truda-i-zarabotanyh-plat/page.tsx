@@ -84,14 +84,19 @@ export default function MarketOverviewPage() {
             Обзор рынка труда и заработных плат
           </h1>
           <p className="mb-10 max-w-[600px] font-[Gilroy,sans-serif] text-[18px] text-[#26262B] md:text-[20px]">
-            Профессиональные услуги по комплексному анализу рынка труда. Исследование рынка труда позволяет прогнозировать возможные риски для вашего бизнеса.
+            Профессиональные услуги по комплексному анализу рынка труда. Исследование рынка труда позволяет
+            прогнозировать возможные риски для вашего бизнеса.
           </p>
           <Link href="#consultation" className="group inline-flex items-center gap-4">
             <span className="border-b border-transparent font-[Gilroy,sans-serif] text-[14px] font-bold uppercase tracking-widest text-[#26262B] transition-all group-hover:border-[#e61a66]">
               Получить бесплатную консультацию
             </span>
             <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#26262B] transition-all group-hover:border-[#e61a66] group-hover:bg-[#e61a66]">
-              <img src="/assets/icons/arrow-right.svg" alt="" className="h-5 w-5 transition-colors group-hover:text-white" />
+              <img
+                src="/assets/icons/arrow-right.svg"
+                alt=""
+                className="h-5 w-5 transition-colors group-hover:text-white"
+              />
             </div>
           </Link>
         </div>
@@ -105,16 +110,11 @@ export default function MarketOverviewPage() {
           </h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {advantages.map((advantage, i) => (
-              <div
-                key={i}
-                className="flex items-start gap-4 rounded-[20px] bg-white p-6 shadow-sm"
-              >
+              <div key={i} className="flex items-start gap-4 rounded-[20px] bg-white p-6 shadow-sm">
                 <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#e61a66]">
                   <img src="/assets/icons/check.svg" alt="" className="h-5 w-5 text-white" />
                 </div>
-                <p className="font-[Gilroy,sans-serif] text-[16px] leading-relaxed text-[#26262B]">
-                  {advantage}
-                </p>
+                <p className="font-[Gilroy,sans-serif] text-[16px] leading-relaxed text-[#26262B]">{advantage}</p>
               </div>
             ))}
           </div>
@@ -129,16 +129,11 @@ export default function MarketOverviewPage() {
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {processSteps.map((step, i) => (
-              <div
-                key={i}
-                className="relative rounded-[30px] bg-[#F5F5F5] p-8"
-              >
+              <div key={i} className="relative rounded-[30px] bg-[#F5F5F5] p-8">
                 <span className="mb-4 block font-[Gilroy,sans-serif] text-[48px] font-bold text-[#e61a66] opacity-30">
                   {step.number}
                 </span>
-                <h3 className="mb-3 font-[Gilroy,sans-serif] text-[20px] font-bold text-[#26262B]">
-                  {step.title}
-                </h3>
+                <h3 className="mb-3 font-[Gilroy,sans-serif] text-[20px] font-bold text-[#26262B]">{step.title}</h3>
                 <p className="font-[Gilroy,sans-serif] text-[16px] leading-relaxed text-[#26262B] opacity-70">
                   {step.description}
                 </p>

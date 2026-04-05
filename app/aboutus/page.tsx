@@ -26,7 +26,7 @@ export default function AboutUsPage() {
   return (
     <main className="min-h-screen bg-white">
       <JsonLd data={aboutSchema} />
-      
+
       {/* Hero Section */}
       <section className="px-5 pb-20 pt-[140px]">
         <div className="mx-auto max-w-[1240px]">
@@ -53,11 +53,7 @@ export default function AboutUsPage() {
             {/* Play Button Overlay */}
             <div className="transition-bg absolute inset-0 flex flex-col items-center justify-center bg-black/20 duration-300 group-hover:bg-black/30">
               <div className="mb-6 flex h-[80px] w-[80px] items-center justify-center rounded-full border border-white/30 bg-white/20 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 md:h-[100px] md:w-[100px]">
-                <img
-                  src="/assets/external/play.svg"
-                  alt="Play"
-                  className="ml-1 h-10 w-10 md:h-12 md:w-12"
-                />
+                <img src="/assets/external/play.svg" alt="Play" className="ml-1 h-10 w-10 md:h-12 md:w-12" />
               </div>
               <p className="px-4 text-center font-[Gilroy,sans-serif] text-[12px] font-bold uppercase tracking-widest text-white md:text-[14px]">
                 ПОСМОТРИТЕ КОРОТКОЕ ВИДЕО О КОМПАНИИ
@@ -126,7 +122,6 @@ export default function AboutUsPage() {
           </div>
         </div>
       </section>
-
-          </main>
+    </main>
   )
 }

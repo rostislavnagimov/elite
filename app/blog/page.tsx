@@ -42,7 +42,7 @@ export default function BlogPage() {
   return (
     <main className="min-h-screen bg-white">
       <JsonLd data={blogSchema} />
-      
+
       {/* Hero Section */}
       <section className="px-5 pb-12 pt-[140px] text-[#26262B]">
         <div className="mx-auto max-w-[1240px]">
@@ -99,7 +99,11 @@ export default function BlogPage() {
 
                     <div className="mt-auto flex items-center gap-1 font-[Gilroy,sans-serif] text-[16px] font-medium text-[#26262b] transition-colors group-hover:text-[#e61a66]">
                       Читать дальше
-                      <img src="/assets/icons/arrow-right.svg" alt="" className="mt-0.5 h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                      <img
+                        src="/assets/icons/arrow-right.svg"
+                        alt=""
+                        className="mt-0.5 h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1"
+                      />
                     </div>
                   </div>
                 </a>
@@ -115,7 +119,6 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-
-          </main>
+    </main>
   )
 }

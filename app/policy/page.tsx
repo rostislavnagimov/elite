@@ -33,13 +33,11 @@ export default function PolicyPage() {
           <div className="space-y-12">
             {/* Section 1 */}
             <div>
-              <h2 className="mb-4 font-[Gilroy,sans-serif] text-[24px] font-bold text-[#26262B]">
-                1. Общие положения
-              </h2>
+              <h2 className="mb-4 font-[Gilroy,sans-serif] text-[24px] font-bold text-[#26262B]">1. Общие положения</h2>
               <p className="font-[Gilroy,sans-serif] text-[16px] leading-relaxed text-[#26262B] opacity-80">
-                Настоящая Политика конфиденциальности персональных данных (далее — Политика конфиденциальности) 
-                действует в отношении всей информации, которую кадровый холдинг «Elite», расположенный по адресу 
-                г. Алматы, ул. Кабанбай батыра, 109/51, может получить о Пользователе во время использования сайта, 
+                Настоящая Политика конфиденциальности персональных данных (далее — Политика конфиденциальности)
+                действует в отношении всей информации, которую кадровый холдинг «Elite», расположенный по адресу г.
+                Алматы, ул. Кабанбай батыра, 109/51, может получить о Пользователе во время использования сайта,
                 программ и продуктов сайта elite.kz.
               </p>
             </div>
@@ -129,9 +127,7 @@ export default function PolicyPage() {
 
             {/* Section 6 */}
             <div>
-              <h2 className="mb-4 font-[Gilroy,sans-serif] text-[24px] font-bold text-[#26262B]">
-                6. Ваши права
-              </h2>
+              <h2 className="mb-4 font-[Gilroy,sans-serif] text-[24px] font-bold text-[#26262B]">6. Ваши права</h2>
               <p className="font-[Gilroy,sans-serif] text-[16px] leading-relaxed text-[#26262B] opacity-80">
                 Вы имеете право:
               </p>
@@ -152,20 +148,22 @@ export default function PolicyPage() {
 
             {/* Section 7 */}
             <div>
-              <h2 className="mb-4 font-[Gilroy,sans-serif] text-[24px] font-bold text-[#26262B]">
-                7. Контакты
-              </h2>
+              <h2 className="mb-4 font-[Gilroy,sans-serif] text-[24px] font-bold text-[#26262B]">7. Контакты</h2>
               <p className="font-[Gilroy,sans-serif] text-[16px] leading-relaxed text-[#26262B] opacity-80">
                 По всем вопросам, связанным с обработкой персональных данных, вы можете связаться с нами:
               </p>
               <div className="mt-4 space-y-2">
                 <p className="font-[Gilroy,sans-serif] text-[16px] text-[#26262B]">
                   <span className="opacity-60">Телефон:</span>{' '}
-                  <a href="tel:+77013555355" className="text-[#e61a66] hover:underline">+7 (701) 355-53-55</a>
+                  <a href="tel:+77013555355" className="text-[#e61a66] hover:underline">
+                    +7 (701) 355-53-55
+                  </a>
                 </p>
                 <p className="font-[Gilroy,sans-serif] text-[16px] text-[#26262B]">
                   <span className="opacity-60">Email:</span>{' '}
-                  <a href="mailto:sales@elite.kz" className="text-[#e61a66] hover:underline">sales@elite.kz</a>
+                  <a href="mailto:sales@elite.kz" className="text-[#e61a66] hover:underline">
+                    sales@elite.kz
+                  </a>
                 </p>
                 <p className="font-[Gilroy,sans-serif] text-[16px] text-[#26262B]">
                   <span className="opacity-60">Адрес:</span> г. Алматы, ул. Кабанбай батыра, 109/51

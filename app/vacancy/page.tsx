@@ -1,8 +1,8 @@
 import {Metadata} from 'next'
-import { VacancyList } from '../components/vacancies/VacancyList';
-import vacanciesData from '../../vacancies.json';
-import { Vacancy } from '../components/vacancies/VacancyCard';
-import JsonLd from '../components/JsonLd';
+import {VacancyList} from '../components/vacancies/VacancyList'
+import vacanciesData from '../../vacancies.json'
+import {Vacancy} from '../components/vacancies/VacancyCard'
+import JsonLd from '../components/JsonLd'
 
 export const metadata: Metadata = {
   title: 'Все вакансии | Elite',
@@ -22,8 +22,8 @@ const schema = {
 export default function AllVacanciesPage() {
   // Flatten all category arrays into one array
   const allVacancies: Vacancy[] = Object.values(vacanciesData).reduce((acc: Vacancy[], curr) => {
-    return acc.concat(Array.isArray(curr) ? curr : []);
-  }, []);
+    return acc.concat(Array.isArray(curr) ? curr : [])
+  }, [])
 
   return (
     <main className="min-h-screen bg-white">
@@ -40,5 +40,5 @@ export default function AllVacanciesPage() {
         </div>
       </div>
     </main>
-  );
+  )
 }

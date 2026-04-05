@@ -73,21 +73,15 @@ export default function ReviewsPage() {
                 className="flex h-full flex-col rounded-[30px] bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
               >
                 <div className="mb-6 flex-grow">
-                  <svg
-                    className="mb-4 h-8 w-8 text-[#e61a66] opacity-30"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
+                  <svg className="mb-4 h-8 w-8 text-[#e61a66] opacity-30" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                   </svg>
-                  <p className="font-[Gilroy,sans-serif] text-[16px] leading-relaxed text-[#26262B] italic">
+                  <p className="font-[Gilroy,sans-serif] text-[16px] italic leading-relaxed text-[#26262B]">
                     {review.text}
                   </p>
                 </div>
                 <div className="border-t border-gray-100 pt-6">
-                  <p className="font-[Gilroy,sans-serif] text-[18px] font-bold text-[#26262B]">
-                    {review.author}
-                  </p>
+                  <p className="font-[Gilroy,sans-serif] text-[18px] font-bold text-[#26262B]">{review.author}</p>
                   <p className="font-[Gilroy,sans-serif] text-[14px] uppercase tracking-wider text-[#e61a66]">
                     {review.role}
                   </p>

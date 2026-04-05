@@ -1,11 +1,12 @@
 import {Metadata} from 'next'
-import { VacancyList } from '../components/vacancies/VacancyList'
+import {VacancyList} from '../components/vacancies/VacancyList'
 import vacanciesData from '../../vacancies.json'
 import JsonLd from '../components/JsonLd'
 
 export const metadata: Metadata = {
   title: 'Вакансии - IT и телеком | Elite',
-  description: 'Вакансии в сфере IT, интернета и телекома в Алматы. Разработчики, тестировщики, аналитики, системные администраторы.',
+  description:
+    'Вакансии в сфере IT, интернета и телекома в Алматы. Разработчики, тестировщики, аналитики, системные администраторы.',
   alternates: {
     canonical: 'https://elite.kz/vacancies-it'
   }

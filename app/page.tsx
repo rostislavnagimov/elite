@@ -12,7 +12,7 @@ import Subscription from './components/landing/Subscription'
 import Footer from './components/landing/Footer'
 import JsonLd from './components/JsonLd'
 
-import { useState, useEffect } from 'react'
+import {useState, useEffect} from 'react'
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',

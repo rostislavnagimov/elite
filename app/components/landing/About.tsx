@@ -45,13 +45,7 @@ export default function About() {
               aria-label="Подробнее"
             >
               {/* Arrow icon from original */}
-              <Image
-                src="/assets/external/arrow-down.webp"
-                alt=""
-                width={17}
-                height={15}
-                unoptimized
-              />
+              <Image src="/assets/external/arrow-down.webp" alt="" width={17} height={15} unoptimized />
             </Link>
 
             {/* "ПОДРОБНЕЕ" text */}
@@ -80,13 +74,7 @@ export default function About() {
             overflow: 'hidden'
           }}
         >
-          <Image
-            src="/assets/external/about-mobile.webp"
-            alt=""
-            fill
-            className="object-cover object-top"
-            unoptimized
-          />
+          <Image src="/assets/external/about-mobile.webp" alt="" fill className="object-cover object-top" unoptimized />
 
           {/* Video button — rotating circle + play, positioned inside the image area */}
           <div className="absolute" style={{top: '245px', left: '160px'}}>
@@ -98,13 +86,7 @@ export default function About() {
             >
               {/* Rotating circle text */}
               <div className="absolute inset-0 animate-spin" style={{animationDuration: '15s'}}>
-                <Image
-                  src="/assets/external/about-video-bg.webp"
-                  alt=""
-                  fill
-                  className="object-contain"
-                  unoptimized
-                />
+                <Image src="/assets/external/about-video-bg.webp" alt="" fill className="object-contain" unoptimized />
               </div>
               {/* Play icon centered */}
               <div className="absolute inset-0 flex items-center justify-center">
@@ -121,16 +103,8 @@ export default function About() {
           </div>
         </div>
 
-        <div
-          className="relative mx-auto mt-8 h-[200px] w-full max-w-[452px] overflow-hidden rounded-[100px] lg:hidden sm:h-[239px]"
-        >
-          <Image
-            src="/assets/external/about-mobile.webp"
-            alt=""
-            fill
-            className="object-cover object-top"
-            unoptimized
-          />
+        <div className="relative mx-auto mt-8 h-[200px] w-full max-w-[452px] overflow-hidden rounded-[100px] sm:h-[239px] lg:hidden">
+          <Image src="/assets/external/about-mobile.webp" alt="" fill className="object-cover object-top" unoptimized />
         </div>
       </div>
     </section>

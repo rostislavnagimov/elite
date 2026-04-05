@@ -1,9 +1,9 @@
 export default function Clients() {
   const partners = [
-    { name: 'WILO CENTER ASIA', industry: 'Инженерное оборудование' },
-    { name: 'Торговый-промышленный Банк Китая', industry: 'Банковский сектор' },
-    { name: 'НК АСТАНА ЭКСПО-2017', industry: 'Выставочная деятельность' },
-    { name: 'РЭЦЦА', industry: 'Экологические проекты' }
+    {name: 'WILO CENTER ASIA', industry: 'Инженерное оборудование'},
+    {name: 'Торговый-промышленный Банк Китая', industry: 'Банковский сектор'},
+    {name: 'НК АСТАНА ЭКСПО-2017', industry: 'Выставочная деятельность'},
+    {name: 'РЭЦЦА', industry: 'Экологические проекты'}
   ]
 
   return (
@@ -19,9 +19,7 @@ export default function Clients() {
               key={index}
               className="flex h-32 flex-col items-center justify-center rounded-lg border border-gray-100 bg-[#F5F5F5] p-4 text-center transition-all hover:border-[#e61a66]/30 hover:shadow-md"
             >
-              <p className="font-[Gilroy,sans-serif] text-[16px] font-bold uppercase text-[#26262B]">
-                {partner.name}
-              </p>
+              <p className="font-[Gilroy,sans-serif] text-[16px] font-bold uppercase text-[#26262B]">{partner.name}</p>
               <p className="mt-1 font-[Gilroy,sans-serif] text-[12px] uppercase tracking-wider text-[#26262B] opacity-50">
                 {partner.industry}
               </p>

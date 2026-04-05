@@ -41,7 +41,6 @@ export default async function BlogPostPage({params}: {params: Promise<{slug: str
 
   return (
     <main className="min-h-screen bg-white">
-      
       <article className="pb-24 pt-[140px]">
         {/* Post Header */}
         <div className="mx-auto max-w-[1240px] px-5">
@@ -71,7 +70,6 @@ export default async function BlogPostPage({params}: {params: Promise<{slug: str
           </div>
         </div>
       </article>
-
-          </main>
+    </main>
   )
 }

@@ -3,32 +3,32 @@
 import Link from 'next/link'
 
 const leftColumn = [
-  { label: 'It/интернет/телеком', href: '/vacancies-it' },
-  { label: 'Административный персонал', href: '/administrativnyy-personal' },
-  { label: 'Банки/инвестиции/лизинг', href: '/banki-investitsii-lizing' },
-  { label: 'Бухгалтерия/финансы/аудит', href: '/bukhgalteriya-finansy-audit' },
-  { label: 'Добыча сырья', href: '/dobycha-syrya' },
-  { label: 'Логистика/транспорт', href: '/logistika-transport' },
-  { label: 'Маркетинг/реклама/pr', href: '/marketing-reklama-pr' },
-  { label: 'Медицина, фармацевтика', href: '/meditsina-farmatsevtika' },
-  { label: 'Начинающим специалистам', href: '/nachinayushchim-spetsialistam' }
+  {label: 'It/интернет/телеком', href: '/vacancies-it'},
+  {label: 'Административный персонал', href: '/administrativnyy-personal'},
+  {label: 'Банки/инвестиции/лизинг', href: '/banki-investitsii-lizing'},
+  {label: 'Бухгалтерия/финансы/аудит', href: '/bukhgalteriya-finansy-audit'},
+  {label: 'Добыча сырья', href: '/dobycha-syrya'},
+  {label: 'Логистика/транспорт', href: '/logistika-transport'},
+  {label: 'Маркетинг/реклама/pr', href: '/marketing-reklama-pr'},
+  {label: 'Медицина, фармацевтика', href: '/meditsina-farmatsevtika'},
+  {label: 'Начинающим специалистам', href: '/nachinayushchim-spetsialistam'}
 ]
 
 const rightColumn = [
-  { label: 'Образование', href: '/obrazovaniye' },
-  { label: 'Продажи', href: '/prodazhi' },
-  { label: 'Производство', href: '/proizvodstvo' },
-  { label: 'Строительство', href: '/stroitelstvo' },
-  { label: 'Технические', href: '/tekhnicheskiye' },
-  { label: 'Топ-менеджмент', href: '/top-management' },
-  { label: 'Управление персоналом/hr', href: '/upravleniye-personalom-hr' },
-  { label: 'Юриспруденция', href: '/yurisprudentsiya' }
+  {label: 'Образование', href: '/obrazovaniye'},
+  {label: 'Продажи', href: '/prodazhi'},
+  {label: 'Производство', href: '/proizvodstvo'},
+  {label: 'Строительство', href: '/stroitelstvo'},
+  {label: 'Технические', href: '/tekhnicheskiye'},
+  {label: 'Топ-менеджмент', href: '/top-management'},
+  {label: 'Управление персоналом/hr', href: '/upravleniye-personalom-hr'},
+  {label: 'Юриспруденция', href: '/yurisprudentsiya'}
 ]
 
 import vacanciesData from '../../../vacancies.json'
-import { Vacancy, VacancyCard } from '../vacancies/VacancyCard'
-import { VacancyModal } from '../vacancies/VacancyModal'
-import { useState } from 'react'
+import {Vacancy, VacancyCard} from '../vacancies/VacancyCard'
+import {VacancyModal} from '../vacancies/VacancyModal'
+import {useState} from 'react'
 
 export default function Vacancies() {
   const [selectedVacancy, setSelectedVacancy] = useState<Vacancy | null>(null)
@@ -110,8 +110,7 @@ export default function Vacancies() {
         className="relative w-full overflow-hidden"
         style={{
           height: '413px',
-          backgroundImage:
-            "url('/assets/external/vacancies-bg.webp')",
+          backgroundImage: "url('/assets/external/vacancies-bg.webp')",
           backgroundAttachment: 'fixed',
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
@@ -119,7 +118,7 @@ export default function Vacancies() {
         }}
       >
         {/* Бегущая строка у нижнего края фото */}
-        <div className="absolute bottom-0 left-0 right-0 overflow-hidden" style={{ height: '98px' }}>
+        <div className="absolute bottom-0 left-0 right-0 overflow-hidden" style={{height: '98px'}}>
           <div
             style={{
               display: 'inline-block',
@@ -132,7 +131,7 @@ export default function Vacancies() {
               color: '#fff9'
             }}
           >
-            {Array.from({ length: 14 }).map((_, i) => (
+            {Array.from({length: 14}).map((_, i) => (
               <span key={i}>
                 <strong>ВАКАНСИИ </strong>ВАКАНСИИ{' '}
               </span>
@@ -160,18 +159,11 @@ export default function Vacancies() {
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {latestJobs.map((job, index) => (
-            <VacancyCard
-              key={`${job.Название}-${index}`}
-              vacancy={job}
-              onSelect={setSelectedVacancy}
-            />
+            <VacancyCard key={`${job.Название}-${index}`} vacancy={job} onSelect={setSelectedVacancy} />
           ))}
         </div>
 
-        <VacancyModal
-          vacancy={selectedVacancy}
-          onClose={() => setSelectedVacancy(null)}
-        />
+        <VacancyModal vacancy={selectedVacancy} onClose={() => setSelectedVacancy(null)} />
       </div>
     </section>
   )

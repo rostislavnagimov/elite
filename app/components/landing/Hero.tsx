@@ -6,10 +6,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <video autoPlay muted loop playsInline className="absolute inset-0 h-full w-full object-cover">
-          <source
-            src="./hero.mp4"
-            type="video/mp4"
-          />
+          <source src="./hero.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/50" /> {/* Background overlay */}
       </div>

@@ -1,10 +1,8 @@
 'use client'
 
-
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-white">
-      
       {/* Hero Section */}
       <section className="px-5 pb-12 pt-[140px]">
         <div className="mx-auto max-w-[1200px] 2xl:max-w-[1400px]">
@@ -109,7 +107,6 @@ export default function ContactPage() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </section>
-
-          </main>
+    </main>
   )
 }

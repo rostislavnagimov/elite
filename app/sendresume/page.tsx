@@ -39,9 +39,7 @@ export default function SendResumePage() {
                 <img src="/assets/icons/check.svg" alt="" className="h-10 w-10 text-[#e61a66]" />
               </div>
             </div>
-            <h1 className="mb-4 font-[Gilroy,sans-serif] text-[32px] font-bold text-[#26262B]">
-              Спасибо!
-            </h1>
+            <h1 className="mb-4 font-[Gilroy,sans-serif] text-[32px] font-bold text-[#26262B]">Спасибо!</h1>
             <p className="font-[Gilroy,sans-serif] text-[18px] text-[#26262B] opacity-60">
               Ваше резюме успешно отправлено. Мы свяжемся с вами в ближайшее время.
             </p>
@@ -63,7 +61,8 @@ export default function SendResumePage() {
             ОТПРАВИТЬ РЕЗЮМЕ
           </h1>
           <p className="mb-10 max-w-[600px] font-[Gilroy,sans-serif] text-[18px] text-[#26262B] md:text-[20px]">
-            Заполните форму ниже или прикрепите готовое резюме. Наши специалисты рассмотрят вашу кандидатуру и свяжутся с вами.
+            Заполните форму ниже или прикрепите готовое резюме. Наши специалисты рассмотрят вашу кандидатуру и свяжутся
+            с вами.
           </p>
         </div>
       </section>
@@ -153,7 +152,12 @@ export default function SendResumePage() {
                   className="flex cursor-pointer items-center gap-4 rounded-xl border-2 border-dashed border-gray-300 bg-white px-6 py-8 transition-all hover:border-[#e61a66]"
                 >
                   <svg className="h-8 w-8 text-[#e61a66]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"
+                    />
                   </svg>
                   <div>
                     <p className="font-[Gilroy,sans-serif] text-[16px] font-medium text-[#26262B]">
@@ -222,7 +226,12 @@ export default function SendResumePage() {
               <p className="mb-2 font-[Gilroy,sans-serif] text-[14px] uppercase tracking-wider text-[#26262B] opacity-50">
                 WhatsApp
               </p>
-              <a href="https://api.whatsapp.com/send/?phone=77017690208" target="_blank" rel="noopener noreferrer" className="font-[Gilroy,sans-serif] text-[20px] font-bold text-[#e61a66]">
+              <a
+                href="https://api.whatsapp.com/send/?phone=77017690208"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-[Gilroy,sans-serif] text-[20px] font-bold text-[#e61a66]"
+              >
                 +7 701 769 02 08
               </a>
             </div>

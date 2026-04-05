@@ -96,7 +96,7 @@ export default function ServicesTabs() {
                 </li>
               ))}
             </ul>
-            <Link 
+            <Link
               href={activeTab.link}
               className="mt-10 inline-block rounded-full bg-[#e61a66] px-10 py-4 text-sm font-[300] uppercase tracking-wider text-white shadow-md transition-colors hover:bg-[#c91659]"
             >

@@ -68,8 +68,8 @@ export default function AboutPage() {
             О КОМПАНИИ
           </h1>
           <p className="mb-10 max-w-[600px] font-[Gilroy,sans-serif] text-[18px] text-[#26262B] md:text-[20px]">
-            Кадровый Холдинг Elite приглашает вас стать одним из наших сотрудников. 
-            Мы одна из первых кадровых компаний на рынке Республики Казахстан с 28-летней историей.
+            Кадровый Холдинг Elite приглашает вас стать одним из наших сотрудников. Мы одна из первых кадровых компаний
+            на рынке Республики Казахстан с 28-летней историей.
           </p>
         </div>
       </section>
@@ -83,12 +83,12 @@ export default function AboutPage() {
                 Почему стоит работать с Elite
               </h2>
               <p className="mb-6 font-[Gilroy,sans-serif] text-[16px] leading-relaxed text-[#26262B] opacity-80">
-                Elite предлагает широкий спектр услуг в области кадрового консалтинга. 
-                Мы имеем широкую партнерскую сеть во многих регионах Казахстана и за рубежом.
+                Elite предлагает широкий спектр услуг в области кадрового консалтинга. Мы имеем широкую партнерскую сеть
+                во многих регионах Казахстана и за рубежом.
               </p>
               <p className="font-[Gilroy,sans-serif] text-[16px] leading-relaxed text-[#26262B] opacity-80">
-                Нашими консультантами реализуются проекты для крупнейших казахстанских и международных компаний 
-                в различных отраслях экономики. Присоединяйтесь к команде профессионалов!
+                Нашими консультантами реализуются проекты для крупнейших казахстанских и международных компаний в
+                различных отраслях экономики. Присоединяйтесь к команде профессионалов!
               </p>
             </div>
             <div>
@@ -133,7 +133,11 @@ export default function AboutPage() {
                   <span className="font-[Gilroy,sans-serif] text-[14px] font-bold uppercase tracking-wider text-[#e61a66] transition-colors group-hover:text-white">
                     Подробнее
                   </span>
-                  <img src="/assets/icons/arrow-right.svg" alt="" className="h-5 w-5 text-[#e61a66] transition-colors group-hover:text-white" />
+                  <img
+                    src="/assets/icons/arrow-right.svg"
+                    alt=""
+                    className="h-5 w-5 text-[#e61a66] transition-colors group-hover:text-white"
+                  />
                 </div>
               </Link>
             ))}
